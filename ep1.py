@@ -64,9 +64,6 @@ def main():
             if i==0:
                 print ("-"*len(c))
                 i+=1
-            
-        # Aluno A: substitua este comentário pelo código para imprimir 
-        # o cenário atual.
 
         opcoes = cenario_atual['opcoes']
         if len(opcoes) == 0:
