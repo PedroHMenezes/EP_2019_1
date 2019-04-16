@@ -124,6 +124,8 @@ def main():
                     print("Espada adicionada ao inventário")
                 else:
                     print("Então vá em frente e abra essa porta")
+                #for k,v in opcoes.items():
+                    #del
             for k,v in opcoes.items():
                 print(k+': '+v)
             escolha=input('Para onde deseja ir?')
