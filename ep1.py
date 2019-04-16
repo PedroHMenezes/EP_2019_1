@@ -100,8 +100,26 @@ def main():
                               " pergunta:")
                         print("'Você conhece a Next?'")
                         print("Você com pressa responde que sim")
-                        print("COMO ASSIM VOCÊ JÁ CONHECE A NEXT?!?!?!")
+                        tempo(3)
+                        print('\033[31m'+'COMO ASSIM VOCÊ JÁ CONHECE A NEXT?!?!?!'+'\033[0;0m')
+                        tempo(2)
                         print("O funcionário vira um monstro")
+                        print("Opções: Combater o monstro ou perder 15 de dano de ataque")
+                        op=input('O que deseja fazer?(combate/fugir)')
+                        if op=='combate':
+                            print('\033[31m'+'Início do Combate'+'\033[0;0m')
+                            print('Escolha o ataque:')
+                            print('1) Print sem parentêses(5 de dano de ataque)')
+                            print('2) Função sem return(10 de dano de ataque)')
+                            golpe=input('Qual golpe deseja escolher?(1 ou 2)')
+                            if golpe==1:
+                                print('O monstro perde 5 pontos de vida')
+                                print('O monstro usa o ataque especial:')
+                                tempo(2)
+                                print(...)
+                                tempo(2)
+                                print('Taxa de juros em 90%')
+                                print('Você perde 5 pontos de vida')
                 i+=1
             elif cenario_atual==cenarios["andar professor"]:
                 print("Ao chegar no andar do professor percebe que há"
