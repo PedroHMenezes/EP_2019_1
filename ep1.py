@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Apr 16 18:12:55 2019
+
+@author: Pedro
+"""
 # EP 2019-1: Escape Insper
 #
 # Alunos: 
@@ -8,9 +14,15 @@ import time
 
 def tempo(t):
     time.sleep(t)
+
+def printa_status(Vj,Dj,Ej,Level):
+    print("Level: {0}".format(Level))
+    print("Vida: {0}".format(Vj))
+    print("Damage: {0}".format(Dj))
+    print("Armour: {0}".format(Ej))
     
 def batalha(Vj,Dj,Ej,Vm,Dm,Em):
-    while Vm>0 or Vj>0:
+    while Vm>0 and Vj>0:
         Vm=Vm-(Dj-Em)
         Vj=Vj-(Dm-Ej)
     if Vj<=0:
@@ -66,13 +78,15 @@ def main():
         "na entrada do Insper, e quer procurar o professor para pedir um "
         "adiamento do EP (boa sorte...)")
     tempo(5)
-    print()
-    print("HP: 150")
-    print("Damage: 20")
-    print("Defesa: 5")
+    Vj=150
+    Dj=20
+    Ej=5
+    Level=1
+    print(printa_status(Vj,Dj,Ej,Level))
     cenarios, nome_cenario_atual = carregar_cenarios()
     i=0
     j=0
+    Inventario=[]
     game_over = False
     while not game_over:
         cenario_atual = cenarios[nome_cenario_atual]
@@ -115,19 +129,22 @@ def main():
                         print("Opções: Combater o monstro ou perder 15 de dano de ataque")
                         op=input('O que deseja fazer?(combate/fugir)')
                         if op=='combate':
-                            print('\033[31m'+'Início do Combate'+'\033[0;0m')
-                            print('Escolha o ataque:')
-                            print('1) Print sem parentêses(5 de dano de ataque)')
-                            print('2) Função sem return(10 de dano de ataque)')
-                            golpe=input('Qual golpe deseja escolher?(1 ou 2)')
-                            if golpe==1:
-                                print('O monstro perde 5 pontos de vida')
-                                print('O monstro usa o ataque especial:')
-                                tempo(2)
-                                print(...)
-                                tempo(2)
-                                print('Taxa de juros em 90%')
-                                print('Você perde 5 pontos de vida')
+                            print("Status do monstro")
+                            Levelm=2
+                            Vm=50
+                            Dm=10
+                            Em=0
+                            print(printa_status(Vm,Dm,Em,Levelm))
+                            batalha_next=batalha(Vj,Dj,Ej,Vm,Dm,Em)
+                            print("Você subiu de nível!")
+                            Level+=1
+                            print(printa_status(batalha_next,Dj,Ej,Level))
+                            print("O monstro ao morrer dropou um cartão débito da Next")
+                            print("Há um saldo de 50 reais nele")
+                        else:
+                            print("Você perdeu 15 de dano de ataque")
+                            Dj=Dj-15
+                            print(printa_status(Vj,Dj,Ej,Level))
                 i+=1
             elif cenario_atual==cenarios["andar professor"]:
                 print("Ao chegar no andar do professor percebe que há"
