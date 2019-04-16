@@ -4,6 +4,12 @@
 # - aluno A: Pedro Henrique Menezes de Oliveira, pedrohmo@al.insper.edu.br
 # - aluno B: Sicrano de Almeida, sicranoa1@insper.edu.br
 
+import time
+
+def tempo(t):
+    time.sleep(t)
+
+Inventario=[]
 def carregar_cenarios():
     cenarios = {
         "inicio": {
@@ -46,10 +52,12 @@ def main():
     print()
     print("Parecia uma boa idéia: vou só jogar um pouquinho/assistir Netflix/"
         "embaçar em geral. Amanhã eu começo o EP. Mas isso não deu certo...")
+    tempo(5)
     print()
     print("É o dia de entregar o EP e você está muuuuito atrasado! Você está "
         "na entrada do Insper, e quer procurar o professor para pedir um "
         "adiamento do EP (boa sorte...)")
+    tempo(5)
     print()
 
     cenarios, nome_cenario_atual = carregar_cenarios()
