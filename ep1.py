@@ -81,8 +81,9 @@ def main():
 
             # Aluno B: substitua este comentário e a linha abaixo pelo código
             # para pedir a escolha do usuário.
-            escolha = ""
-
+            for k,v in opcoes.items():
+                print(k+': '+v)
+            escolha=input('Para onde deseja ir?')
             if escolha in opcoes:
                 nome_cenario_atual = escolha
             else:
