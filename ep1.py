@@ -8,8 +8,16 @@ import time
 
 def tempo(t):
     time.sleep(t)
-
-Inventario=[]
+    
+def batalha(Vj,Dj,Ej,Vm,Dm,Em):
+    while Vm>0 or Vj>0:
+        Vm=Vm-(Dj-Em)
+        Vj=Vj-(Dm-Ej)
+    if Vj<=0:
+        return "Você morreu"
+    else:
+        return Vj
+    
 def carregar_cenarios():
     cenarios = {
         "inicio": {
@@ -155,7 +163,6 @@ def main():
 
     print("Você morreu!")
 
-a
 # Programa principal.
 if __name__ == "__main__":
     main()
