@@ -2,7 +2,7 @@
 #
 # Alunos: 
 # - aluno A: Pedro Henrique Menezes de Oliveira, pedrohmo@al.insper.edu.br
-# - aluno B: Sicrano de Almeida, sicranoa1@insper.edu.br
+# - aluno B: Eiki Luis Yamashiro Batista dos Santos, eikily@insper.edu.br
 
 import time
 
