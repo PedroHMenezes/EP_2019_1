@@ -61,30 +61,30 @@ def main():
     print()
 
     cenarios, nome_cenario_atual = carregar_cenarios()
-    
+    i=0
     game_over = False
     while not game_over:
         cenario_atual = cenarios[nome_cenario_atual]
-        i=0
+        k=0
         for nomes,c in cenario_atual.items():
             if nomes!="opcoes":
                 print (c)
-            if i==0:
+            if k==0:
                 print ("-"*len(c))
-                i+=1
+                k+=1
 
         opcoes = cenario_atual['opcoes']
         if len(opcoes) == 0:
             print("Acabaram-se suas opções! Mwo mwo mwooooo...")
             game_over = True
         else:
-            i=0
             if cenario_atual==cenarios ['biblioteca']:
                 print ("Você estava andando na biblioteca e acabou achando"
                       " uma maçã para dar para seu professor quando for pedir o"
                       " adiamento do EP")
                 Inventario.append("Maçã")
                 print ("Maçã adicionada ao inventário")
+                
             elif cenario_atual==cenarios['inicio']:
                 if i==1:
                     print("Você voltou ao Saguão de entrada do Insper e"
@@ -98,6 +98,7 @@ def main():
                         print("Você com pressa responde que sim")
                         print("COMO ASSIM VOCÊ JÁ CONHECE A NEXT?!?!?!")
                         print("O funcionário vira um monstro")
+                i+=1
             for k,v in opcoes.items():
                 print(k+': '+v)
             escolha=input('Para onde deseja ir?')
