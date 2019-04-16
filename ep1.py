@@ -62,6 +62,7 @@ def main():
 
     cenarios, nome_cenario_atual = carregar_cenarios()
     i=0
+    j=0
     game_over = False
     while not game_over:
         cenario_atual = cenarios[nome_cenario_atual]
@@ -79,11 +80,12 @@ def main():
             game_over = True
         else:
             if cenario_atual==cenarios ['biblioteca']:
-                print ("Você estava andando na biblioteca e acabou achando"
-                      " uma maçã para dar para seu professor quando for pedir o"
-                      " adiamento do EP")
-                Inventario.append("Maçã")
-                print ("Maçã adicionada ao inventário")
+                if j==0:
+                    print ("Você estava andando na biblioteca e acabou achando"
+                           " uma maçã para dar para seu professor quando for pedir o"
+                           " adiamento do EP")
+                    Inventario.append("Maçã")
+                    print ("Maçã adicionada ao inventário")
                 
             elif cenario_atual==cenarios['inicio']:
                 if i==1:
@@ -99,6 +101,27 @@ def main():
                         print("COMO ASSIM VOCÊ JÁ CONHECE A NEXT?!?!?!")
                         print("O funcionário vira um monstro")
                 i+=1
+            elif cenario_atual==cenarios["andar professor"]:
+                print("Ao chegar no andar do professor percebe que há"
+                        "uma força estranha no ar...")
+                print("Na entrada da sala do professor há uma espada "
+                        "encravada numa pilha de provas")
+                print("Ao chegar mais perto você observa e vê que são"
+                        "provas de Python e observa que há uma frase escrita"
+                        "na espada")
+                print("O aluno que conseguir retirar a"
+                        "espada encravada nesta pilha de provas será o capaz"
+                        "de ser chamado de oráculo do Python")
+                espada=input("Deseja tentar retirar a espada?(sim/não)")
+                if espada=="sim":
+                    print ("Você puxa com tanta força a espada que quando ela"
+                           " sai da pilha de provas te corta no braço")
+                    print("Ao analisar a espada você ganha +20"
+                          " de dano de ataque")
+                    Inventario.append("espada")
+                    print("Espada adicionada ao inventário")
+                else:
+                    print("Então vá em frente e abra essa porta")
             for k,v in opcoes.items():
                 print(k+': '+v)
             escolha=input('Para onde deseja ir?')
