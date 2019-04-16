@@ -59,7 +59,7 @@ def main():
         "adiamento do EP (boa sorte...)")
     tempo(5)
     print()
-    print("HP: 500")
+    print("HP: 150")
     print("Damage: 20")
     print("Defesa: 5")
     cenarios, nome_cenario_atual = carregar_cenarios()
