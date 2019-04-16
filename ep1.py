@@ -81,19 +81,19 @@ def main():
             i=0
             if cenario_atual==cenarios ['biblioteca']:
                 print ("Você estava andando na biblioteca e acabou achando"
-                      "uma maçã para dar para seu professor quando for pedir o"
-                      "adiamento do EP")
+                      " uma maçã para dar para seu professor quando for pedir o"
+                      " adiamento do EP")
                 Inventario.append("Maçã")
                 print ("Maçã adicionada ao inventário")
             elif cenario_atual==cenarios['inicio']:
                 if i==1:
                     print("Você voltou ao Saguão de entrada do Insper e"
-                        "se deparou com a Next fazendo uma propaganda e dando"
-                        "ingressos para o cinema")
+                        " se deparou com a Next fazendo uma propaganda e dando"
+                        " ingressos para o cinema")
                     ingresso=input("Deseja pegar um ingresso?(sim/não)")
                     if ingresso=="sim":
                         print("Um dos funcionários da Next chega em você e"
-                              "pergunta:")
+                              " pergunta:")
                         print("'Você conhece a Next?'")
                         print("Você com pressa responde que sim")
                         print("COMO ASSIM VOCÊ JÁ CONHECE A NEXT?!?!?!")
