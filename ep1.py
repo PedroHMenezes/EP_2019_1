@@ -112,6 +112,7 @@ def carregar_cenarios():
                 "opcoes": {
                         "sala comp": "Ir para a sala com muitos equipamentos eletrônicos",
                         "fablab": "Ir para o famoso fablab do Insper",
+                        "Sala 405": "Ir para a sala 405 (Predio Velho)"
             }
         },
         "sala comp": {
@@ -408,6 +409,20 @@ def main():
             elif escolha==cenarios["quarto andar"]:
                 tempo(3)
                 print("O quarto andar pode ser um ótimo lugar para aumentar seu inventário")
+            elif escolha==cenarios["sala comp"]:
+                tempo(3)
+                print("Você encontra vários Alienwares...")
+                tempo(3)
+                pro=input("Deseja roubar um Alienware?(sim/nao)")
+                if pro=="sim":
+                    Inventario.append("Alienware")
+                    print('\033[35m'+'Alienware adicionado ao inventário'+'\033[0;0m')
+                    tempo(3)
+                    print('\033[36m'+'+20 pontos de Armour'+'\033[0;0m')
+                    tempo(3)
+                else:
+                    print("Você saiu da sala comp")
+                    tempo(3)
                 #for k,v in opcoes.items():
                     #del
             for k,v in opcoes.items():
