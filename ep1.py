@@ -216,20 +216,47 @@ def main():
                         while i<len(Inventario):
                             print(Inventario[i])
                             i+=1
-                            escolha=input("Deseja usar alguma coisa dessas?(digite um dos itens)")
-                            if escolha in Inventario:
-                                if escolha=="Maçã":
-                                    print("Você deu a maçã para o professor")
-                                    print("Ele, muito agradecido, nega sua oferta dizendo"
-                                          " que não gosta de maçãs")
-                                elif escolha=="Cartão de débito":
-                                    print("Olha professor... Eu tenho esse cartão"
-                                        " que você pode usar para pagar um almoção"
-                                        " lá no Laranjinha. O que acha?")
-                                    print(" 'Hmmm... Eu gosto do chef de lá... O que"
-                                        " você quer em troca?")
-                                    print("Então... Eu preciso de um adiamento do EP...")
-                                    print(" 'Bom... Posso adiar para amanhã. O que acha?")
+                        escolha=input("Deseja usar alguma coisa dessas?(digite um dos itens)")
+                        if escolha in Inventario:
+                            if escolha=="Maçã":
+                                print("Você deu a maçã para o professor")
+                                print("Ele, muito agradecido, nega sua oferta dizendo"
+                                      " que não gosta de maçãs")
+                                print("Maçã retorna ao seu inventário")
+                            elif escolha=="Cartão de débito":
+                                print("Olha professor... Eu tenho esse cartão"
+                                      " que você pode usar para pagar um almoção"
+                                      " lá no Laranjinha. O que acha?")
+                                print(" 'Hmmm... Eu gosto do chef de lá... O que"
+                                      " você quer em troca?")
+                                print("Você entrega o cartão para o professor")
+                                del Inventario("Cartão de débito")
+                                print("Então... Eu preciso de um adiamento do EP...")
+                                print(" 'Bom... Posso adiar para amanhã. O que acha?")
+                                print("Mas para amanhã é pouco tempo professor!!!")
+                                print("'Então o que mais você pode me oferecer?")
+                                oferecimento=input("O que você quer oferecer?"
+                                                   " (nada/alguma outra coisa do"
+                                                   " inventário)")
+                                if oferecimento == "nada":
+                                    print("COMO ASSIM NÃO QUER ME OFERECER MAIS NADA?")
+                                    decisao_final="Sair no soco"
+                                    i=10
+                                elif oferecimento=="alguma outra coisa do inventário":
+                                    i=0
+                                    while i<len(Inventario):
+                                        print(Inventario[i])
+                                        i+=1
+                                    escolha=input("O que quer oferecer?")
+                            elif escolha=="pen drive":
+                                print(" 'O que é isso? Um pen drive? O que tem ai dentro?")
+                                print("O Python 4.0...")
+                                print("O professor olha fixamente nos seus olhos e"
+                                    " ao perceber a gravidade de um aluno possuir tais"
+                                    " arquivos tão poderosos, vira o monstro do Python"
+                                    " para proteger a mais nova edição do Python")
+                                decisao_final="Sair no soco"
+                                i=10
                             else:
                                 print("Você está tentando usar um item que não"
                                     " está em seu inventário")
