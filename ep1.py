@@ -81,7 +81,7 @@ def carregar_cenarios():
                 "descricao": "Você está no lab de informática e percebe que o professor de "
                 "design de software esqueceu um pen-drive... Com o Python 4.0!!!!",
                 "opcoes":{
-                         "quarto andar": "Voltar para o saguão do quarto andar"
+                        "quarto andar": "Voltar para o saguão do quarto andar"
             }
         },
         "lab de quim": {
@@ -95,10 +95,41 @@ def carregar_cenarios():
                 "título": "Sala 405",
                 "descricao": "Você está na sala da tortura",
                 "opcoes": {
-                        "quarto andar": "Voltar para o saguão do quarto andar"
+                        "inicio": "Voltar para o saguao de entrada",
+                        "lab de info": "Ir para o laboratório de Informática",
+                        "lab de quim": "Ir para o laboratório de Química",
+                        "andar professor": "Tomar elevador para andar do professor",
+                        "quarto andar": "Voltar para o saguão do quarto andar",
+                        "biblioteca": "Ir para a biblioteca",
+                        "sala comp": "Ir para a sala com computadores super caros (Predio Novo)",
+                        "fablab": "Ir para o famoso fablab do Insper (Predio Novo)",
+                        "saguao": "Ir para o saguão do prédio novo (Predio Novo)"
             }
-        }
+        },
+        "saguao": {
+                "titulo": "Predio Novo",
+                "descricao": "Você está no prédio de engenharia!",
+                "opcoes": {
+                        "sala comp": "Ir para a sala com muitos equipamentos eletrônicos",
+                        "fablab": "Ir para o famoso fablab do Insper",
+            }
+        },
+        "sala comp": {
+                "titulo": "Sala do Milhão",
+                "descricao": "Você está na sala do computador da NASA do Insper",
+                "opcoes": {
+                        "saguao": "Ir para o saguão do predio novo",
+            }
+        },
+        "fablab": {
+                "titulo": "Sala da Criação",
+                "descricao": "Você está no famoso fablab do Insper",
+                "opcoes": {
+                        "saguao": "Ir para o saguão do predio novo"
+            }
+        },
     }
+                        
     nome_cenario_atual = "inicio"
     return cenarios, nome_cenario_atual
 
@@ -329,7 +360,21 @@ def main():
                     print(printa_status(Vj,Dj,Ej,Level,''))
                     tempo(4)
                 else:
-                    game_over = True
+                    print("Você fugiu")
+            elif escolha==cenarios["sala 405"]:
+                tempo(3)
+                print("Você tenta abrir a porta da sala 405, mas ela não abre...")
+                tempo(1)
+                print("Então você faz mais força, e ela abre")
+                tempo(2)
+                print("Dentro da sala você percebe que há uma máquina de teleporte!")
+                tempo(2)
+                tel=input("Deseja entrar na máquina de teleporte?(sim/nao)")
+                if tel=="sim":
+                        print('\033[36m'+'Você está na máquina de teleporte'+'\033[0;0m')
+                        tempo(3)
+                else:
+                    print("Você sai da sala 405")
             elif escolha==cenarios["andar professor"]:
                 tempo(5)
                 print("Ao chegar no andar do professor percebe que há"
@@ -363,9 +408,6 @@ def main():
             elif escolha==cenarios["quarto andar"]:
                 tempo(3)
                 print("O quarto andar pode ser um ótimo lugar para aumentar seu inventário")
-            elif escolha==cenarios["lab de info"]:
-                tempo(3)
-                print("")
                 #for k,v in opcoes.items():
                     #del
             for k,v in opcoes.items():
