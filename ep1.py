@@ -39,7 +39,7 @@ def carregar_cenarios():
             "titulo": "Saguao do perigo",
             "descricao": "Voce esta no saguao de entrada do insper",
             "opcoes": {
-                "andar professor": "Tomar o elevador para o andar do professor",
+                "quarto andar": "Tomar elevador e ir para o quarto andar",
                 "biblioteca": "Ir para a biblioteca"
             }
         },
@@ -63,6 +63,40 @@ def carregar_cenarios():
             "descricao": "Voce esta na biblioteca",
             "opcoes": {
                 "inicio": "Voltar para o saguao de entrada"
+            }
+        },
+        "quarto andar": {
+                "titulo": "Andar do cansaço",
+                "descricao": "Você está no saguão do quarto andar",
+                "opcoes":{
+                        "inicio": "Voltar para o saguao de entrada",
+                        "lab de info": "Ir para o laboratório de Informática",
+                        "lab de quim": "Ir para o laboratório de Química",
+                        "sala 405": "Ir para a sala 405",
+                        "andar professor": "Tomar elevador para andar do professor"
+            }
+        },
+        "lab de info": {
+                "título": "Laboratório de Informática",
+                "descricao": "Você está no lab de informática e percebe que o professor de "
+                "design de software esqueceu um pen-drive... Com o Python 4.0!!!!",
+                "opcoes":{
+                         "Pegar o pen-drive": "Conseguir o uso exclusivo do Python 4.0 (+5 de armour)",
+                         "quarto andar": "Voltar para o saguão do quarto andar"
+            }
+        },
+        "lab de quim": {
+                "título": "Laboratório de Química",
+                "descricao": "Você está no lab de química",
+                "opcoes": {
+                        "quarto andar": "Voltar para o saguão do quarto andar"
+            }
+        },
+        "sala 405": {
+                "título": "Sala 405",
+                "descricao": "Você está na sala da tortura",
+                "opcoes": {
+                        "quarto andar": "Voltar para o saguão do quarto andar"
             }
         }
     }
@@ -187,6 +221,7 @@ def main():
                                     print("Ele, muito agradecido, nega sua oferta dizendo"
                                           " que não gosta de maçãs")
             elif escolha==cenarios["andar professor"]:
+                tempo(5)
                 print("Ao chegar no andar do professor percebe que há"
                         "uma força estranha no ar...")
                 tempo(4)
@@ -212,6 +247,12 @@ def main():
                     print('\033[35m'+'Espada adicionada ao inventário'+'\033[0;0m')
                 else:
                     print("Então vá em frente e abra essa porta")
+            elif escolha==cenarios["quarto andar"]:
+                tempo(3)
+                print("O quarto andar pode ser um ótimo lugar para aumentar seu inventário")
+            elif escolha==cenarios["lab de info"]:
+                tempo(3)
+                print("")
                 #for k,v in opcoes.items():
                     #del
             for k,v in opcoes.items():
