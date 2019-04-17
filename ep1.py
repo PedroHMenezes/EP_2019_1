@@ -109,7 +109,7 @@ def main():
                            " uma maçã para dar para seu professor quando for pedir o"
                            " adiamento do EP")
                     Inventario.append("Maçã")
-                    print ("Maçã adicionada ao inventário")
+                    print ('\033[35m'+'Maçã adicionada ao inventário'+'\033[0;0m')
                 
             elif cenario_atual==cenarios['inicio']:
                 if i==1:
@@ -123,7 +123,7 @@ def main():
                         print("'Você conhece a Next?'")
                         print("Você com pressa responde que sim")
                         tempo(3)
-                        print('\033[31m'+'COMO ASSIM VOCÊ JÁ CONHECE A NEXT?!?!?!'+'\033[0;0m')
+                        print('\033[32m'+'COMO ASSIM VOCÊ JÁ CONHECE A NEXT?!?!?!'+'\033[0;0m')
                         tempo(2)
                         print("O funcionário vira um monstro")
                         print("Opções: Combater o monstro ou perder 15 de dano de ataque")
@@ -136,17 +136,17 @@ def main():
                             Em=0
                             print(printa_status(Vm,Dm,Em,Levelm))
                             batalha_next=batalha(Vj,Dj,Ej,Vm,Dm,Em)
-                            print("Você subiu de nível!")
+                            print('\033[33m'+'Você subiu de nível!'+'\033[0;0m')
                             Level+=1
                             print(printa_status(batalha_next,Dj,Ej,Level))
                             print("O monstro ao morrer dropou um cartão débito da Next")
                             print("Há um saldo de 50 reais nele")
                         else:
-                            print("Você perdeu 15 de dano de ataque")
+                            print("'\033[31m'+'Você perdeu 15 de dano de ataque'+'\033[0;0m'")
                             Dj=Dj-15
                             print(printa_status(Vj,Dj,Ej,Level))
                 i+=1
-            elif escolha=="professor":
+            elif cenario_atual=="professor":
                 print("Ao entrar na sala você se depara com o monstro"
                     " do Python")
                 print("'Olá, caro aluno, o que deseja?'")
@@ -180,10 +180,9 @@ def main():
                 if espada=="sim":
                     print ("Você puxa com tanta força a espada que quando ela"
                            " sai da pilha de provas te corta no braço")
-                    print("Ao analisar a espada você ganha +20"
-                          " de dano de ataque")
+                    print('\033[33m'+'Ao analisar a espada você ganha +20 de dano de ataque'+'\033[0;0m')
                     Inventario.append("espada")
-                    print("Espada adicionada ao inventário")
+                    print('\033[35m'+'Espada adicionada ao inventário'+'\033[0;0m')
                 else:
                     print("Então vá em frente e abra essa porta")
                 #for k,v in opcoes.items():

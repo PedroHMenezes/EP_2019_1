@@ -7,7 +7,7 @@ Created on Fri Apr 12 10:45:29 2019
 
 #ESQUEMA DE CORES:
 '\033[31m'+'Início do Combate'+'\033[0;0m'
-print ('\033[31m'+'Isto eh vermelho'+'\033[0;0m')
+print ('\033[33m'+'Isto eh vermelho'+'\033[0;0m')
 print ('\033[32m'+'Isto eh verde'+'\033[0;0m')
 print ('\033[42m'+'\033[1m'+'\033[33m'+'Isto eh amarelo negrito com fundo verde'+'\033[0;0m')
 print ('\033[42;1;33m'+'Isto eh amarelo negrito com fundo verde'+'\033[0;0m')
