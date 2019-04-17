@@ -16,7 +16,7 @@ def tempo(t):
     time.sleep(t)
 
 def printa_status(Vj,Dj,Ej,Level):
-    print('\033[4m'+'Seu Status'+'\033[0;0m')
+    print('\033[4m'+'Status'+'\033[0;0m')
     tempo(2)
     print("Level: {0}".format(Level))
     print("Vida: {0}".format(Vj))
