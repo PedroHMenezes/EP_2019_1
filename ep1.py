@@ -15,8 +15,8 @@ import time
 def tempo(t):
     time.sleep(t)
 
-def printa_status(Vj,Dj,Ej,Level):
-    print('\033[4m'+'Status'+'\033[0;0m')
+def printa_status(Vj,Dj,Ej,Level,nome):
+    print('\033[4m'+'Status {0}'.format(nome)+'\033[0;0m')
     tempo(2)
     print("Level: {0}".format(Level))
     print("Vida: {0}".format(Vj))
@@ -119,7 +119,7 @@ def main():
     Dj=20
     Ej=5
     Level=1
-    print(printa_status(Vj,Dj,Ej,Level))
+    print(printa_status(Vj,Dj,Ej,Level,''))
     cenarios, nome_cenario_atual = carregar_cenarios()
     i=0
     j=0
@@ -173,13 +173,12 @@ def main():
                         tempo(2)
                         op=input('O que deseja fazer?(combate/fugir)')
                         tempo(2)
-                        if op=='combate':
-                            print("Status do monstro")
+                        if op=='combate':                      
                             Levelm=2
                             Vm=50
                             Dm=10
                             Em=0
-                            print(printa_status(Vm,Dm,Em,Levelm))
+                            print(printa_status(Vm,Dm,Em,Levelm,"Monstro"))
                             tempo(3)
                             print("Você está batalhando contra o Monstro do Next")
                             tempo(1)
@@ -191,13 +190,13 @@ def main():
                             print('\033[33m'+'Você subiu de nível!'+'\033[0;0m')
                             Level+=1
                             tempo(1)
-                            print(printa_status(batalha_next,Dj,Ej,Level))
+                            print(printa_status(batalha_next,Dj,Ej,Level,''))
                             tempo(2)
                             print("O monstro ao morrer dropou um cartão débito da Next")
                             tempo(2)
                             print("Há um saldo de 50 reais nele")
                             Inventario.append("Cartão de débito")
-                            print("Cartão adicionado ao inventário")
+                            print('\033[35m'+'Cartão adicionado ao inventário'+'\033[0;0m')
                         else:
                             print("'\033[31m'+'Você perdeu 15 de dano de ataque'+'\033[0;0m'")
                             Dj=Dj-15
@@ -320,6 +319,8 @@ def main():
                     print('\033[36m'+'Você subiu de nível!'+'\033[0;0m')
                     Level+=1
                     print(printa_status(Vj,Dj,Ej,Level))
+                else:
+                    game_over = True
             elif escolha==cenarios["andar professor"]:
                 tempo(5)
                 print("Ao chegar no andar do professor percebe que há"
