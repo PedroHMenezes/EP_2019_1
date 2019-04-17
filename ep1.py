@@ -196,6 +196,8 @@ def main():
                             print("O monstro ao morrer dropou um cartão débito da Next")
                             tempo(2)
                             print("Há um saldo de 50 reais nele")
+                            Inventario.append("Cartão de débito")
+                            print("Cartão adicionado ao inventário")
                         else:
                             print("'\033[31m'+'Você perdeu 15 de dano de ataque'+'\033[0;0m'")
                             Dj=Dj-15
@@ -220,6 +222,17 @@ def main():
                                     print("Você deu a maçã para o professor")
                                     print("Ele, muito agradecido, nega sua oferta dizendo"
                                           " que não gosta de maçãs")
+                                elif escolha=="Cartão de débito":
+                                    print("Olha professor... Eu tenho esse cartão"
+                                        " que você pode usar para pagar um almoção"
+                                        " lá no Laranjinha. O que acha?")
+                                    print(" 'Hmmm... Eu gosto do chef de lá... O que"
+                                        " você quer em troca?")
+                                    print("Então... Eu preciso de um adiamento do EP...")
+                                    print(" 'Bom... Posso adiar para amanhã. O que acha?")
+                            else:
+                                print("Você está tentando usar um item que não"
+                                    " está em seu inventário")
             elif escolha==cenarios["andar professor"]:
                 tempo(5)
                 print("Ao chegar no andar do professor percebe que há"
