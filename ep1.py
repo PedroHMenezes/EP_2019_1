@@ -1,8 +1,8 @@
-# -*- coding: utf-8 -*-
+# -- coding: utf-8 --
 """
 Created on Tue Apr 16 18:12:55 2019
 
-@author: Pedro
+@author: Pedro 
 """
 # EP 2019-1: Escape Insper
 #
@@ -16,10 +16,13 @@ def tempo(t):
     time.sleep(t)
 
 def printa_status(Vj,Dj,Ej,Level):
+    print('\033[4m'+'Seu Status'+'\033[0;0m')
+    tempo(2)
     print("Level: {0}".format(Level))
     print("Vida: {0}".format(Vj))
     print("Damage: {0}".format(Dj))
     print("Armour: {0}".format(Ej))
+    return ''
     
 def batalha(Vj,Dj,Ej,Vm,Dm,Em):
     while Vm>0 and Vj>0:
@@ -89,45 +92,53 @@ def main():
     Inventario=[]
     game_over = False
     while not game_over:
-        cenario_atual = cenarios[nome_cenario_atual]
+        escolha = cenarios[nome_cenario_atual]
         k=0
-        for nomes,c in cenario_atual.items():
+        for nomes,c in escolha.items():
             if nomes!="opcoes":
                 print (c)
             if k==0:
                 print ("-"*len(c))
                 k+=1
 
-        opcoes = cenario_atual['opcoes']
+        opcoes = escolha['opcoes']
         if len(opcoes) == 0:
             print("Acabaram-se suas opções! Mwo mwo mwooooo...")
             game_over = True
         else:
-            if cenario_atual==cenarios ['biblioteca']:
+            if escolha==cenarios ['biblioteca']:
                 if j==0:
                     print ("Você estava andando na biblioteca e acabou achando"
                            " uma maçã para dar para seu professor quando for pedir o"
                            " adiamento do EP")
+                    tempo(2)
                     Inventario.append("Maçã")
                     print ('\033[35m'+'Maçã adicionada ao inventário'+'\033[0;0m')
+                    tempo(2)
                 
-            elif cenario_atual==cenarios['inicio']:
+            elif escolha==cenarios['inicio']:
                 if i==1:
                     print("Você voltou ao Saguão de entrada do Insper e"
                         " se deparou com a Next fazendo uma propaganda e dando"
                         " ingressos para o cinema")
+                    tempo(4)
                     ingresso=input("Deseja pegar um ingresso?(sim/não)")
                     if ingresso=="sim":
                         print("Um dos funcionários da Next chega em você e"
                               " pergunta:")
+                        tempo(2)
                         print("'Você conhece a Next?'")
+                        tempo(1)
                         print("Você com pressa responde que sim")
                         tempo(3)
                         print('\033[32m'+'COMO ASSIM VOCÊ JÁ CONHECE A NEXT?!?!?!'+'\033[0;0m')
                         tempo(2)
                         print("O funcionário vira um monstro")
+                        tempo(2)
                         print("Opções: Combater o monstro ou perder 15 de dano de ataque")
+                        tempo(2)
                         op=input('O que deseja fazer?(combate/fugir)')
+                        tempo(2)
                         if op=='combate':
                             print("Status do monstro")
                             Levelm=2
@@ -135,18 +146,28 @@ def main():
                             Dm=10
                             Em=0
                             print(printa_status(Vm,Dm,Em,Levelm))
+                            tempo(3)
+                            print("Você está batalhando contra o Monstro do Next")
+                            tempo(1)
+                            print('...')
+                            tempo(1)
+                            print('Você ganhou a batalha!')
                             batalha_next=batalha(Vj,Dj,Ej,Vm,Dm,Em)
+                            tempo(1)
                             print('\033[33m'+'Você subiu de nível!'+'\033[0;0m')
                             Level+=1
+                            tempo(1)
                             print(printa_status(batalha_next,Dj,Ej,Level))
+                            tempo(2)
                             print("O monstro ao morrer dropou um cartão débito da Next")
+                            tempo(2)
                             print("Há um saldo de 50 reais nele")
                         else:
                             print("'\033[31m'+'Você perdeu 15 de dano de ataque'+'\033[0;0m'")
                             Dj=Dj-15
                             print(printa_status(Vj,Dj,Ej,Level))
                 i+=1
-            elif cenario_atual=="professor":
+            elif escolha=="professor":
                 print("Ao entrar na sala você se depara com o monstro"
                     " do Python")
                 print("'Olá, caro aluno, o que deseja?'")
@@ -165,23 +186,29 @@ def main():
                                     print("Você deu a maçã para o professor")
                                     print("Ele, muito agradecido, nega sua oferta dizendo"
                                           " que não gosta de maçãs")
-            elif cenario_atual==cenarios["andar professor"]:
+            elif escolha==cenarios["andar professor"]:
                 print("Ao chegar no andar do professor percebe que há"
                         "uma força estranha no ar...")
+                tempo(4)
                 print("Na entrada da sala do professor há uma espada "
-                        "encravada numa pilha de provas")
+                        "encravada numa pilha de provas...")
+                tempo(4)
                 print("Ao chegar mais perto você observa e vê que são"
                         "provas de Python e observa que há uma frase escrita"
                         "na espada")
-                print("O aluno que conseguir retirar a"
+                tempo(4)
+                print("O aluno que conseguir retirar a "
                         "espada encravada nesta pilha de provas será o capaz"
                         "de ser chamado de oráculo do Python")
+                tempo(5)
                 espada=input("Deseja tentar retirar a espada?(sim/não)")
                 if espada=="sim":
                     print ("Você puxa com tanta força a espada que quando ela"
                            " sai da pilha de provas te corta no braço")
+                    tempo(4)
                     print('\033[33m'+'Ao analisar a espada você ganha +20 de dano de ataque'+'\033[0;0m')
                     Inventario.append("espada")
+                    tempo(3)
                     print('\033[35m'+'Espada adicionada ao inventário'+'\033[0;0m')
                 else:
                     print("Então vá em frente e abra essa porta")
@@ -199,5 +226,5 @@ def main():
     print("Você morreu!")
 
 # Programa principal.
-if __name__ == "__main__":
+if _name_ == "_main_":
     main()
