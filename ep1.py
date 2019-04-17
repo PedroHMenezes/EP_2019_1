@@ -324,8 +324,10 @@ def main():
                     print("Pontos de vida após a batalha: {0}".format(a))
                     tempo(4)
                     print('\033[36m'+'Você subiu de nível!'+'\033[0;0m')
+                    tempo(4)
                     Level+=1
                     print(printa_status(Vj,Dj,Ej,Level,''))
+                    tempo(4)
                 else:
                     game_over = True
             elif escolha==cenarios["andar professor"]:
