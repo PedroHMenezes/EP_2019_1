@@ -226,5 +226,8 @@ def main():
     print("Você morreu!")
 
 # Programa principal.
+_name_= "_main_"
 if _name_ == "_main_":
     main()
+
+
