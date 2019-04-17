@@ -81,13 +81,12 @@ def carregar_cenarios():
                 "descricao": "Você está no lab de informática e percebe que o professor de "
                 "design de software esqueceu um pen-drive... Com o Python 4.0!!!!",
                 "opcoes":{
-                         "Pegar o pen-drive": "Conseguir o uso exclusivo do Python 4.0 (+5 de armour)",
                          "quarto andar": "Voltar para o saguão do quarto andar"
             }
         },
         "lab de quim": {
                 "título": "Laboratório de Química",
-                "descricao": "Você está no lab de química",
+                "descricao": "Algo de errado não está certo...",
                 "opcoes": {
                         "quarto andar": "Voltar para o saguão do quarto andar"
             }
@@ -145,7 +144,7 @@ def main():
                     print ("Você estava andando na biblioteca e acabou achando"
                            " uma maçã para dar para seu professor quando for pedir o"
                            " adiamento do EP")
-                    tempo(2)
+                    tempo(4)
                     Inventario.append("Maçã")
                     print ('\033[35m'+'Maçã adicionada ao inventário'+'\033[0;0m')
                     tempo(2)
@@ -167,7 +166,7 @@ def main():
                         tempo(3)
                         print('\033[32m'+'COMO ASSIM VOCÊ JÁ CONHECE A NEXT?!?!?!'+'\033[0;0m')
                         tempo(2)
-                        print("O funcionário vira um monstro")
+                        print('\033[32m'+'O FUNCIONÁRIO VIRA UM MONSTRO'+'\033[0;0m')
                         tempo(2)
                         print("Opções: Combater o monstro ou perder 15 de dano de ataque")
                         tempo(2)
@@ -181,22 +180,28 @@ def main():
                             print(printa_status(Vm,Dm,Em,Levelm,"Monstro"))
                             tempo(3)
                             print("Você está batalhando contra o Monstro do Next")
-                            tempo(1)
+                            tempo(2)
                             print('...')
-                            tempo(1)
-                            print('Você ganhou a batalha!')
+                            tempo(2)
+                            print("Grrrr...")
+                            tempo(3)
+                            print("...")
+                            tempo(3)
+                            print('\033[34m'+'Você ganhou a batalha!'+'\033[0;0m')
                             batalha_next=batalha(Vj,Dj,Ej,Vm,Dm,Em)
-                            tempo(1)
+                            tempo(4)
                             print('\033[33m'+'Você subiu de nível!'+'\033[0;0m')
                             Level+=1
-                            tempo(1)
+                            tempo(3)
                             print(printa_status(batalha_next,Dj,Ej,Level,''))
-                            tempo(2)
+                            tempo(4)
                             print("O monstro ao morrer dropou um cartão débito da Next")
-                            tempo(2)
+                            tempo(4)
                             print("Há um saldo de 50 reais nele")
                             Inventario.append("Cartão de débito")
+                            tempo(4)
                             print('\033[35m'+'Cartão adicionado ao inventário'+'\033[0;0m')
+                            tempo(4)
                         else:
                             print("'\033[31m'+'Você perdeu 15 de dano de ataque'+'\033[0;0m'")
                             Dj=Dj-15
@@ -266,13 +271,13 @@ def main():
                 tempo(3)
                 print("Você olha para o pen-drive")
                 tempo(3)
-                print(...)
+                print("...")
                 tempo(3)
                 print("O pen-drive olha para você")
                 tempo(3)
-                (...)
+                print("...")
                 tempo(3)
-                print("Você rouba o pen-drive!")
+                print('\033[33m'+'Você rouba o pen-drive'+'\033[0;0m')
                 Inventario.append("pen-drive")
                 tempo(2)
                 print('\033[35m'+'Pen-drive adcionado ao inventário'+'\033[0;0m')
@@ -291,7 +296,7 @@ def main():
                 Dm=8
                 Em=2
                 tempo(3)
-                print("Ele começa a te atacar")
+                print('\033[31m'+'ELE COMEÇA A TE ATACAR!'+'\033[0;0m')
                 tempo(1)
                 print('\033[31m'+'-1 ponto de vida'+'\033[0;0m')
                 tempo(1)
@@ -308,44 +313,49 @@ def main():
                     a=batalha(Vj,Dj,Ej,Vm,Dm,Em)
                     print("A batalha começou!")
                     tempo(3)
-                    print("Grr")
+                    print("...")
+                    tempo(3)
+                    print("Grr...")
                     tempo(3)
                     print('...')
                     tempo(4)
-                    print('\033[34m'+'Você ganhou!'+'\033[0;0m')
+                    print('\033[34m'+'Você ganhou a batalha!'+'\033[0;0m')
                     tempo(1)
                     print("Pontos de vida após a batalha: {0}".format(a))
                     tempo(4)
                     print('\033[36m'+'Você subiu de nível!'+'\033[0;0m')
                     Level+=1
-                    print(printa_status(Vj,Dj,Ej,Level))
+                    print(printa_status(Vj,Dj,Ej,Level,''))
                 else:
                     game_over = True
             elif escolha==cenarios["andar professor"]:
                 tempo(5)
                 print("Ao chegar no andar do professor percebe que há"
-                        "uma força estranha no ar...")
+                        " uma força estranha no ar...")
                 tempo(4)
                 print("Na entrada da sala do professor há uma espada "
-                        "encravada numa pilha de provas...")
+                        " encravada numa pilha de provas...")
                 tempo(4)
                 print("Ao chegar mais perto você observa e vê que são"
-                        "provas de Python e observa que há uma frase escrita"
-                        "na espada")
+                        " provas de Python e observa que há uma frase escrita"
+                        " na espada")
                 tempo(4)
                 print("O aluno que conseguir retirar a "
-                        "espada encravada nesta pilha de provas será o capaz"
-                        "de ser chamado de oráculo do Python")
+                        " espada encravada nesta pilha de provas será o capaz"
+                        " de ser chamado de oráculo do Python")
                 tempo(5)
                 espada=input("Deseja tentar retirar a espada?(sim/não)")
                 if espada=="sim":
                     print ("Você puxa com tanta força a espada que quando ela"
                            " sai da pilha de provas te corta no braço")
-                    tempo(4)
+                    tempo(1)
+                    print('\033[31m'+'-1 ponto de vida'+'\033[0;0m')
+                    tempo(3)
                     print('\033[33m'+'Ao analisar a espada você ganha +20 de dano de ataque'+'\033[0;0m')
                     Inventario.append("espada")
                     tempo(3)
                     print('\033[35m'+'Espada adicionada ao inventário'+'\033[0;0m')
+                    tempo(3)
                 else:
                     print("Então vá em frente e abra essa porta")
             elif escolha==cenarios["quarto andar"]:
