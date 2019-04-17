@@ -146,6 +146,25 @@ def main():
                             Dj=Dj-15
                             print(printa_status(Vj,Dj,Ej,Level))
                 i+=1
+            elif escolha=="professor":
+                print("Ao entrar na sala você se depara com o monstro"
+                    " do Python")
+                print("'Olá, caro aluno, o que deseja?'")
+                decisao_final=input("O que deseja fazer?(Abrir inventário/Conversar/"
+                                  "Sair no soco)")
+                while decisao_final!="Sair no soco":
+                    if decisao_final=="Abrir inventário":
+                        print("Você olha no inventário e vê seus itens")
+                        i=0
+                        while i<len(Inventario):
+                            print(Inventario[i])
+                            i+=1
+                            escolha=input("Deseja usar alguma coisa dessas?(digite um dos itens)")
+                            if escolha in Inventario:
+                                if escolha=="Maçã":
+                                    print("Você deu a maçã para o professor")
+                                    print("Ele, muito agradecido, nega sua oferta dizendo"
+                                          " que não gosta de maçãs")
             elif cenario_atual==cenarios["andar professor"]:
                 print("Ao chegar no andar do professor percebe que há"
                         "uma força estranha no ar...")
