@@ -230,7 +230,7 @@ def main():
                                 print(" 'Hmmm... Eu gosto do chef de lá... O que"
                                       " você quer em troca?")
                                 print("Você entrega o cartão para o professor")
-                                del Inventario("Cartão de débito")
+                                del Inventario["Cartão de débito"]
                                 print("Então... Eu preciso de um adiamento do EP...")
                                 print(" 'Bom... Posso adiar para amanhã. O que acha?")
                                 print("Mas para amanhã é pouco tempo professor!!!")
@@ -260,6 +260,66 @@ def main():
                             else:
                                 print("Você está tentando usar um item que não"
                                     " está em seu inventário")
+            elif escolha==cenarios["quarto andar"]:
+                tempo(3)
+                print("O quarto andar pode ser um ótimo lugar para aumentar seu inventário")
+            elif escolha==cenarios["lab de info"]:
+                tempo(3)
+                print("Você olha para o pen-drive")
+                tempo(3)
+                print(...)
+                tempo(3)
+                print("O pen-drive olha para você")
+                tempo(3)
+                (...)
+                tempo(3)
+                print("Você rouba o pen-drive!")
+                Inventario.append("pen-drive")
+                tempo(2)
+                print('\033[35m'+'Pen-drive adcionado ao inventário'+'\033[0;0m')
+                tempo(2)
+                print('\033[36m'+'+5 pontos de Armour'+'\033[0;0m')
+                Ej+=5
+            elif escolha==cenarios["lab de quim"]:
+                tempo(3)
+                print("Você está no laboratório de química e encontra um colega")
+                tempo(2)
+                print("Mas há algo de diferente nele")
+                tempo(3)
+                print('\033[32m'+'ELE ESTÁ INFECTADO COM UM VÍRUS!!!'+'\033[0;0m')
+                Levelm=3
+                Vm=60
+                Dm=8
+                Em=2
+                tempo(3)
+                print("Ele começa a te atacar")
+                tempo(1)
+                print('\033[31m'+'-1 ponto de vida'+'\033[0;0m')
+                tempo(1)
+                print('\033[31m'+'-1 ponto de vida'+'\033[0;0m')
+                tempo(1)
+                print('\033[31m'+'-1 ponto de vida'+'\033[0;0m')
+                tempo(1)
+                print('\033[31m'+'-1 ponto de vida'+'\033[0;0m')
+                tempo(1)
+                print('\033[31m'+'-1 ponto de vida'+'\033[0;0m')
+                Vj=Vj-5
+                op=input("O que deseja fazer?(combate/fugir)")
+                if op=="combate":
+                    a=batalha(Vj,Dj,Ej,Vm,Dm,Em)
+                    print("A batalha começou!")
+                    time(3)
+                    print("Grr")
+                    time(3)
+                    print('...')
+                    time(4)
+                    print('\033[34m'+'Você ganhou!'+'\033[0;0m')
+                    time(1)
+                    print("Pontos de vida após a batalha: {0}".format(a))
+                    time(4)
+                    print('\033[36m'+'Você subiu de nível!'+'\033[0;0m')
+                    Level+=1
+                    print(printa_status(Vj,Dj,Ej,Level))
             elif escolha==cenarios["andar professor"]:
                 tempo(5)
                 print("Ao chegar no andar do professor percebe que há"
