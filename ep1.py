@@ -129,6 +129,13 @@ def carregar_cenarios():
                         "saguao": "Ir para o saguão do predio novo"
             }
         },
+        "banheiro": {
+                "titulo": "Banheiro",
+                "descricao": "Você está no banheirinho",
+                "opcoes": {
+                        "sala 405": "Ir para a sala 405"
+            }
+        },
     }
                         
     nome_cenario_atual = "inicio"
