@@ -138,7 +138,7 @@ def main():
     print("Na hora do sufoco!")
     print("------------------")
     print()
-    print("Parecia uma boa idéia: vou só jogar um pouquinho/assistir Netflix/"
+    print("Parecia uma boa ideia: vou só jogar um pouquinho/assistir Netflix/"
         "embaçar em geral. Amanhã eu começo o EP. Mas isso não deu certo...")
     tempo(5)
     print()
@@ -256,41 +256,45 @@ def main():
                         if escolha in Inventario:
                             if escolha=="Maçã":
                                 print("Você deu a maçã para o professor")
+                                tempo(2)
                                 print("Ele, muito agradecido, nega sua oferta dizendo"
                                       " que não gosta de maçãs")
+                                tempo(3)
                                 print("Maçã retorna ao seu inventário")
+                                tempo(1)
                             elif escolha=="Cartão de débito":
                                 print("Olha professor... Eu tenho esse cartão"
                                       " que você pode usar para pagar um almoção"
                                       " lá no Laranjinha. O que acha?")
+                                tempo(3)
                                 print(" 'Hmmm... Eu gosto do chef de lá... O que"
                                       " você quer em troca?")
+                                tempo(2)
                                 print("Você entrega o cartão para o professor")
+                                tempo(1)
                                 del Inventario["Cartão de débito"]
                                 print("Então... Eu preciso de um adiamento do EP...")
+                                tempo(2)
                                 print(" 'Bom... Posso adiar para amanhã. O que acha?")
+                                tempo(2)
                                 print("Mas para amanhã é pouco tempo professor!!!")
-                                print("'Então o que mais você pode me oferecer?")
-                                oferecimento=input("O que você quer oferecer?"
-                                                   " (nada/alguma outra coisa do"
-                                                   " inventário)")
-                                if oferecimento == "nada":
-                                    print("COMO ASSIM NÃO QUER ME OFERECER MAIS NADA?")
-                                    decisao_final="Sair no soco"
-                                    i=10
-                                elif oferecimento=="alguma outra coisa do inventário":
-                                    i=0
-                                    while i<len(Inventario):
-                                        print(Inventario[i])
-                                        i+=1
-                                    escolha=input("O que quer oferecer?")
+                                tempo(1)
+                                print("'Isso já é suficiente!' ")
+                                print("Você, sem expectativa de conseguir mais algum"
+                                    " dia, começa a sair da sala")
+                                print(" 'Espere um pouco... Eu precisava que você guardasse"
+                                    " segredo disso...")
+                                
                             elif escolha=="pen drive":
                                 print(" 'O que é isso? Um pen drive? O que tem ai dentro?")
+                                tempo(2)
                                 print("O Python 4.0...")
+                                tempo(1)
                                 print("O professor olha fixamente nos seus olhos e"
                                     " ao perceber a gravidade de um aluno possuir tais"
                                     " arquivos tão poderosos, vira o monstro do Python"
-                                    " para proteger a mais nova edição do Python")
+                                    " para proteger a mais nova edição do Python...")
+                                tempo(6)
                                 decisao_final="Sair no soco"
                                 i=10
                             elif escolha=="espada":
@@ -312,24 +316,36 @@ def main():
                             elif escolha=="Alienware":
                                 print("Ao mostrar o Alienware para o professor ele"
                                     " pergunta:")
+                                tempo(2)
                                 print(" 'Pra que isso?' ")
+                                tempo(1)
                                 print("Você gosta dessa linha de computadores da Dell?")
+                                tempo(2)
                                 print(" 'É, eles são de fato muito bons... Mas o que você"
                                     " quer com eles?")
+                                tempo(3)
                                 print("Poderia adiar o EP em troca de um desses...")
+                                tempo(2)
                                 print("O professor começa a rir com uma risada maligna, "
                                     "como se fosse um monstro...")
-                                brincadeira=input("Você está brincando comigo, certo?")
+                                tempo(3)
+                                brincadeira=input("Você está brincando comigo, certo?(sim/não)")
                                 if brincadeira=="sim":
                                     print("De maneira muito séria, o professor diz:")
+                                    tempo(2)
                                     print(" 'Pois não teve graça alguma' ")
+                                    tempo(1)
                                     print("Ele vira o monstro do Python")
+                                    tempo(1)
                                     decisao_final="Sair no soco"
                                     i=10
                                 else:
                                     print(" 'Como você consegue tentar me chantagear com isso?' ")
+                                    tempo(2)
                                     print("Ele fica irado")
+                                    tempo(1)
                                     print("O professor vira o monstro do Python")
+                                    tempo(1)
                                     decisao_final="Sair no soco"
                                     i=10
                             else:
@@ -415,30 +431,41 @@ def main():
                         tempo(3)
                 elif tel=="nintendo":
                     print("Parece que você encontrou um easter egg...")
+                    tempo(2)
                     print("Você decidiu ligar o nintendo da sala 405 e se deparou"
                         " com um novo jogo")
-                    print("Esse é o Donkey Kong... Surpreso quer jogar uma partidinha")
-                    print("Ao vencer a fase, você desbloquei um item...")
+                    print("Esse é o Donkey Kong... Surpreso, quer jogar só uma partidinha")
+                    tempo(3)
+                    print("Ao vencer a fase, você desbloqueia um item...")
+                    tempo(2)
                     print("Você pode escolher entre a banana dourada, barril explosivo e"
                         " tronco atirador")
+                    tempo(3)
                     arma=input("Qual você escolhe?")
                     if arma=="banana dourada":
                         print("Ao analisar a banana dourada você percebe que ela é capaz"
                             " de recuperar sua vida completamente instantâneamente")
+                        tempo(4)
                         Inventario.append("banana dourada")
-                        print("Banana dourada adicionada ao inventário")
+                        print('\033[35m'+'Banana dourada adcionado ao inventário'+'\033[0;0m')
+                        tempo(2)
                     elif arma=="barril explosivo":
                         print("Analisando o barril, percebe que ele é capaz de causar 250"
                             " de dano de ataque ao inimigo")
+                        tempo(4)
                         Inventario.append("barril explosivo")
-                        print("Barril explosivo adicionado ao inventário")
+                        print('\033[35m'+'Barril explosivo adcionado ao inventário'+'\033[0;0m')
+                        tempo(2)
                     else:
                         print("Ao analisar o tronco atirador você foi capaz de perceber que"
                             " ele pode atirar nozes(ilimitadas!) de longe")
+                        tempo(4)
                         Inventario.append("tronco atirador")
-                        print("Tronco atirador adicionado ao inventário")
+                        print('\033[35m'+'Tronco atirador adcionado ao inventário'+'\033[0;0m')
+                        tempo(2)
                 else:
                     print("Você sai da sala 405")
+                    tempo(2)
             elif escolha==cenarios["andar professor"]:
                 tempo(5)
                 print("Ao chegar no andar do professor percebe que há"
