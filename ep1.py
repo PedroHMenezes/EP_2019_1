@@ -163,6 +163,7 @@ def main():
     j=0
     Inventario=[]
     game_over = False
+    vitoria=False
     while not game_over:
         escolha = cenarios[nome_cenario_atual]
         k=0
@@ -423,7 +424,15 @@ def main():
                                 print("Você pode fazer duas movimentações:")
                                 print("Pedir socorro")
                                 print("Gritar bem alto while sem i+=1")
-                                print("Como última chance, o que deseja fazer?(socorro/while)")
+                                reacao2=input("Como última chance, o que deseja fazer?(socorro/while)")
+                                if reacao2=="socorro":
+                                    print("Você pede socorro, mas ninguém sequer te ouve...")
+                                    game_over==True
+                                else:
+                                    print("O professor sente uma dor muito forte e te larga")
+                                    print("Ele começa a andar para trás...")
+                                    print("Então ele trava (assim como o while...)")
+                                    
                         
 
                     
@@ -602,9 +611,10 @@ def main():
             else:
                 print("Sua indecisão foi sua ruína!")
                 game_over = True
-
-    print("Você morreu!")
-
+    if vitoria==False:    
+        print("Você morreu!")
+    else:
+        print("Parabéns! Você conseguiu adiar o EP")
 # Programa principal.
 _name_= "_main_"
 if _name_ == "_main_":
