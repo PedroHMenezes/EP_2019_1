@@ -384,6 +384,23 @@ def main():
                         print("O professor vira um monstro")
                         decisao_final="Sair no soco"
                 if decisao_final=="Sair no soco":
+                    del opcoes['andar professor']
+                    print ("O professor em forma de monstro, começa a destruir a sala"
+                         " por conta do seu tamanho")
+                    print("Ele agarra você e joga longe, direto para a Hélio Peregrino")
+                    print("Você, atordoado pela queda, pensa em 2 opções:")
+                    print("Pegar a bike do Itau e fugir ou lutar")
+                    Helio_escolha=input("Qual você escolhe?(fugir/lutar)")
+                    if Helio_escolha=="lutar":
+                        print("Você se prepara para o combate!")
+                        print("O professor pula do prédio do Insper direto para a"
+                            " Hélio Peregrino")
+                        print("Ele estremece o chão ao cair e você, quase caindo, dá um"
+                            " mortal para trás e olha fixo para o monstro")
+                        ataque1=input("Qual será seu ataque?")
+                        print("Chute do dragão - 10 de dano")
+                        print("Jogar uma bike do itau - 8 de dano")
+                        print("Usar uma função sem return - 10 de dano")
 
                     
                     
