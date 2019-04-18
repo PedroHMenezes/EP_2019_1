@@ -566,5 +566,3 @@ def main():
 _name_= "_main_"
 if _name_ == "_main_":
     main()
-
-print('oi')
