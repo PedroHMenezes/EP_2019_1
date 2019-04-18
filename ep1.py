@@ -413,6 +413,30 @@ def main():
                 if tel=="sim":
                         print('\033[36m'+'Você está na máquina de teleporte'+'\033[0;0m')
                         tempo(3)
+                elif tel=="nintendo":
+                    print("Parece que você encontrou um easter egg...")
+                    print("Você decidiu ligar o nintendo da sala 405 e se deparou"
+                        " com um novo jogo")
+                    print("Esse é o Donkey Kong... Surpreso quer jogar uma partidinha")
+                    print("Ao vencer a fase, você desbloquei um item...")
+                    print("Você pode escolher entre a banana dourada, barril explosivo e"
+                        " tronco atirador")
+                    arma=input("Qual você escolhe?")
+                    if arma=="banana dourada":
+                        print("Ao analisar a banana dourada você percebe que ela é capaz"
+                            " de recuperar sua vida completamente instantâneamente")
+                        Inventario.append("banana dourada")
+                        print("Banana dourada adicionada ao inventário")
+                    elif arma=="barril explosivo":
+                        print("Analisando o barril, percebe que ele é capaz de causar 250"
+                            " de dano de ataque ao inimigo")
+                        Inventario.append("barril explosivo")
+                        print("Barril explosivo adicionado ao inventário")
+                    else:
+                        print("Ao analisar o tronco atirador você foi capaz de perceber que"
+                            " ele pode atirar nozes(ilimitadas!) de longe")
+                        Inventario.append("tronco atirador")
+                        print("Tronco atirador adicionado ao inventário")
                 else:
                     print("Você sai da sala 405")
             elif escolha==cenarios["andar professor"]:
