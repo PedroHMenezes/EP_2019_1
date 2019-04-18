@@ -280,15 +280,21 @@ def main():
                                 print("Mas para amanhã é pouco tempo professor!!!")
                                 tempo(1)
                                 print("'Isso já é suficiente!' ")
+                                tempo(1)
                                 print("Você, sem expectativa de conseguir mais algum"
                                     " dia, começa a sair da sala")
+                                tempo(2)
                                 print(" 'Espere um pouco... Eu precisava que você guardasse"
                                     " segredo disso...' ")
+                                tempo(2)
                                 print("Você vendo uma oportunidade de adiamento do EP diz que "
                                     "irá falar pra todo mundo se o professor não adiar para um"
                                     " um maior prazo o EP")
+                                tempo(4)
                                 print(" 'Nesse caso... Não terei outra escolha' ")
+                                tempo(1)
                                 print("O professor vira o monstro do Python")
+                                tempo(1)
                                 
                             elif escolha=="pen drive":
                                 print(" 'O que é isso? Um pen drive? O que tem ai dentro?")
@@ -305,19 +311,26 @@ def main():
                             elif escolha=="espada":
                                 print("Acho que não seria uma boa coisa oferecer"
                                     " essa espada a ele...")
+                                tempo(2)
                                 confirmacao=input("Quer mesmo oferecer isso a ele?(sim/não")
                                 if confirmacao=="sim":
                                     print("Você mostra a espada para ele")
+                                    tempo(2)
                                     print(" ' Uau... Você, então, conseguiu retirar a"
                                         " espada daquela pilha de provas...")
+                                    tempo(2)
                                     print(" O professor sussura baixo, quase que de"
                                         " forma incompreensível:")
+                                    tempo(2)
                                     print(" 'Sempre esperei por esse momento...' ")
+                                    tempo(1)
                                     print("O professor vira o monstro do Python")
+                                    tempo(1)
                                     decisao_final=="Sair no soco"
                                     i=10
                                 else:
                                     print("Acho melhor viu...")
+                                    tempo(1)
                             elif escolha=="Alienware":
                                 print("Ao mostrar o Alienware para o professor ele"
                                     " pergunta:")
@@ -353,6 +366,8 @@ def main():
                                     tempo(1)
                                     decisao_final="Sair no soco"
                                     i=10
+                            elif escolha=="banana dourada" or escolha=="barril explosivo" or escolha=="tronco atirador":
+                                print("Não pode oferecer isso ao professor")
                             else:
                                 print("Você está tentando usar um item que não"
                                     " está em seu inventário")
