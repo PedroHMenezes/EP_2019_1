@@ -397,10 +397,34 @@ def main():
                             " Hélio Peregrino")
                         print("Ele estremece o chão ao cair e você, quase caindo, dá um"
                             " mortal para trás e olha fixo para o monstro")
-                        ataque1=input("Qual será seu ataque?")
+                        print(printa_status)
                         print("Chute do dragão - 10 de dano")
                         print("Jogar uma bike do itau - 8 de dano")
                         print("Usar uma função sem return - 10 de dano")
+                        ataque1=input("Qual será seu ataque?(dragão/itau/função)")
+                        if ataque1=="dragão":
+                            print("O professor consegue se programar para virar o "
+                                "Jackie Chan e vocês começam uma luta")
+                            print("Você vai em direção a ele com o chute do dragão")
+                            print("Ele para seu pé com uma das mãos e com a outra segura sua"
+                                " perna")
+                            print("Você rapidamente pensa em possibilidades: pode chutar ele com"
+                                " a outra perna ou tirar a mão da sua perna")
+                            reacao1=input("Qual sua decisão?(chutar/tirar)")
+                            if reacao1=="chutar":
+                                print("Você chuta o professor do lado esquerdo do corpo dele,"
+                                    " fazendo ele largar seu pé e dar um passo atrás")
+                            else:
+                                print("Você soca o braço dele e ao fazer isso ele te segura"
+                                    " no braço")
+                                print("Com poucas opções, você tenta se soltar, mas o Jackie "
+                                    "Chan do Python acaba percebendo isso e está transformando"
+                                    " você em código")
+                                print("Você pode fazer duas movimentações:")
+                                print("Pedir socorro")
+                                print("Gritar bem alto while sem i+=1")
+                                print("Como última chance, o que deseja fazer?(socorro/while)")
+                        
 
                     
                     
@@ -464,7 +488,7 @@ def main():
                     print('\033[36m'+'Você subiu de nível!'+'\033[0;0m')
                     tempo(4)
                     Level+=1
-                    print(printa_status(Vj,Dj,Ej,Level,''))
+                    print(printa_status(a,Dj,Ej,Level,''))
                     tempo(4)
                 else:
                     print("Você fugiu")
