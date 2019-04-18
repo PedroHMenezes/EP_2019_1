@@ -396,13 +396,13 @@ def main():
                         print("Você se prepara para o combate!")
                         print("O professor pula do prédio do Insper direto para a"
                             " Hélio Peregrino")
-                        print("Ele estremece o chão ao cair e você, quase caindo, dá um"
+                        print("Ele estremece o chão ao cair. E você, quase caindo, dá um"
                             " mortal para trás e olha fixo para o monstro")
                         print(printa_status())
                         print("Chute do dragão - 10 de dano")
                         print("Jogar uma bike do itau - 8 de dano")
                         print("Programar uma função sem return - 10 de dano")
-                        ataque1=input("Qual será seu ataque?(dragão/itau/função)")
+                        ataque1=input("Qual será seu ataque?(dragão/itau/funcao)")
                         if ataque1=="dragão":
                             print("O professor consegue se programar para virar o "
                                 "Jackie Chan e vocês começam uma luta")
@@ -443,6 +443,28 @@ def main():
                                     vitoria=True
                                     game_over=True
                         elif ataque1=="itau":
+                        elif ataque1=='funcao':
+                            print("Você define uma função!")
+                            tempo(3)
+                            print("...")
+                            tempo(3)
+                            print("Mas...")
+                            tempo(3)
+                            print("Você não coloca o return!")
+                            tempo(3)
+                            print("O professor então diz:")
+                            tempo(3)
+                            print("...")
+                            tempo(3)
+                            print("'None'")
+                            tempo(3)
+                            print("Então ele olha fixamente para você...")
+                            tempo(3)
+                            print("E grita:")
+                            tempo(2)
+                            print("VOCÊ ESTÁ DE DP!")
+                            tempo(3)
+                            game_over=True
                     else:
                         print("Você pega um patinete elétrico e começa a fugir")
                         tempo(3)
