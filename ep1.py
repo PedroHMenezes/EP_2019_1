@@ -243,10 +243,9 @@ def main():
                 print("Ao entrar na sala você se depara com o monstro"
                     " do Python")
                 print("'Olá, caro aluno, o que deseja?'")
-                decisao_final=input("O que deseja fazer?(Abrir inventário/Conversar/"
-                                  "Sair no soco)")
+                decisao_final=input("O que deseja fazer?(Abrir inventário/Conversar)")
                 while decisao_final!="Sair no soco":
-                    if decisao_final=="Abrir inventário":
+                    if decisao_final=="abrir inventário":
                         print("Você olha no inventário e vê seus itens")
                         i=0
                         while i<len(Inventario):
@@ -307,7 +306,6 @@ def main():
                                     " para proteger a mais nova edição do Python...")
                                 tempo(6)
                                 decisao_final="Sair no soco"
-                                i=10
                             elif escolha=="espada":
                                 print("Acho que não seria uma boa coisa oferecer"
                                     " essa espada a ele...")
@@ -327,7 +325,6 @@ def main():
                                     print("O professor vira o monstro do Python")
                                     tempo(1)
                                     decisao_final=="Sair no soco"
-                                    i=10
                                 else:
                                     print("Acho melhor viu...")
                                     tempo(1)
@@ -356,7 +353,6 @@ def main():
                                     print("Ele vira o monstro do Python")
                                     tempo(1)
                                     decisao_final="Sair no soco"
-                                    i=10
                                 else:
                                     print(" 'Como você consegue tentar me chantagear com isso?' ")
                                     tempo(2)
@@ -365,12 +361,25 @@ def main():
                                     print("O professor vira o monstro do Python")
                                     tempo(1)
                                     decisao_final="Sair no soco"
-                                    i=10
                             elif escolha=="banana dourada" or escolha=="barril explosivo" or escolha=="tronco atirador":
                                 print("Não pode oferecer isso ao professor")
-                            else:
-                                print("Você está tentando usar um item que não"
+                        else:
+                            print("Você está tentando usar um item que não"
                                     " está em seu inventário")
+                    elif decisao_final=="Conversar":
+                        print(" 'Certo... Sobre o que quer conversar?' ")
+                        print("Preciso de um adiamento do EP...")
+                        print(" 'O que você fez nesse tempo que tinha?' ")
+                        print("Ahhh... eu decidi dar um descanso pra mim mesmo...")
+                        print(" 'Acredito que isso não seja uma boa desculpa' ")
+                        print("MAS EU PRECISO DE UM ADIAMENTO DO EP!!!!")
+                        print(" 'VOCÊ NÃO TERÁ ADIAMENTO DO EP!' ")
+                        print("O professor vira um monstro")
+                        decisao_final="Sair no soco"
+                if decisao_final=="Sair no soco":
+                    
+                
+                
             elif escolha==cenarios["quarto andar"]:
                 tempo(3)
                 print("O quarto andar pode ser um ótimo lugar para aumentar seu inventário")
