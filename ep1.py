@@ -293,6 +293,45 @@ def main():
                                     " para proteger a mais nova edição do Python")
                                 decisao_final="Sair no soco"
                                 i=10
+                            elif escolha=="espada":
+                                print("Acho que não seria uma boa coisa oferecer"
+                                    " essa espada a ele...")
+                                confirmacao=input("Quer mesmo oferecer isso a ele?(sim/não")
+                                if confirmacao=="sim":
+                                    print("Você mostra a espada para ele")
+                                    print(" ' Uau... Você, então, conseguiu retirar a"
+                                        " espada daquela pilha de provas...")
+                                    print(" O professor sussura baixo, quase que de"
+                                        " forma incompreensível:")
+                                    print(" 'Sempre esperei por esse momento...' ")
+                                    print("O professor vira o monstro do Python")
+                                    decisao_final=="Sair no soco"
+                                    i=10
+                                else:
+                                    print("Acho melhor viu...")
+                            elif escolha=="Alienware":
+                                print("Ao mostrar o Alienware para o professor ele"
+                                    " pergunta:")
+                                print(" 'Pra que isso?' ")
+                                print("Você gosta dessa linha de computadores da Dell?")
+                                print(" 'É, eles são de fato muito bons... Mas o que você"
+                                    " quer com eles?")
+                                print("Poderia adiar o EP em troca de um desses...")
+                                print("O professor começa a rir com uma risada maligna, "
+                                    "como se fosse um monstro...")
+                                brincadeira=input("Você está brincando comigo, certo?")
+                                if brincadeira=="sim":
+                                    print("De maneira muito séria, o professor diz:")
+                                    print(" 'Pois não teve graça alguma' ")
+                                    print("Ele vira o monstro do Python")
+                                    decisao_final="Sair no soco"
+                                    i=10
+                                else:
+                                    print(" 'Como você consegue tentar me chantagear com isso?' ")
+                                    print("Ele fica irado")
+                                    print("O professor vira o monstro do Python")
+                                    decisao_final="Sair no soco"
+                                    i=10
                             else:
                                 print("Você está tentando usar um item que não"
                                     " está em seu inventário")
