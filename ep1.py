@@ -283,7 +283,12 @@ def main():
                                 print("Você, sem expectativa de conseguir mais algum"
                                     " dia, começa a sair da sala")
                                 print(" 'Espere um pouco... Eu precisava que você guardasse"
-                                    " segredo disso...")
+                                    " segredo disso...' ")
+                                print("Você vendo uma oportunidade de adiamento do EP diz que "
+                                    "irá falar pra todo mundo se o professor não adiar para um"
+                                    " um maior prazo o EP")
+                                print(" 'Nesse caso... Não terei outra escolha' ")
+                                print("O professor vira o monstro do Python")
                                 
                             elif escolha=="pen drive":
                                 print(" 'O que é isso? Um pen drive? O que tem ai dentro?")
