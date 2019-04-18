@@ -53,10 +53,10 @@ def carregar_cenarios():
         },
         "professor": {
             "titulo": "O monstro do Python",
-            "descricao": "Voce foi pedir para o professor adiar o EP. "
-                         "O professor revelou que é um monstro disfarçado "
-                         "e devorou sua alma.",
-            "opcoes": {}
+            "descricao": "Sala do professor",
+            "opcoes": {
+                    "andar professor": "Voltar para andar professor"
+            }
         },
         "biblioteca": {
             "titulo": "Caverna da tranquilidade",
@@ -247,7 +247,7 @@ def main():
                             Dj=Dj-15
                             print(printa_status(Vj,Dj,Ej,Level))
                 i+=1
-            elif escolha=="professor":
+            elif escolha==cenarios["professor"]:
                 print("Ao entrar na sala você se depara com o monstro"
                     " do Python")
                 print("'Olá, caro aluno, o que deseja?'")
@@ -519,7 +519,7 @@ def main():
                         tempo(3)
                         print('\033[31m'+'Ai! Você caiu feio!'+'\033[0;0m')
                         tempo(3)
-                        gamer_over=True
+                        game_over=True
             elif escolha==cenarios["quarto andar"]:
                 tempo(3)
                 print("O quarto andar pode ser um ótimo lugar para aumentar seu inventário")
@@ -567,7 +567,7 @@ def main():
                 op=input("O que deseja fazer?(combate/fugir)")
                 if op=="combate":
                     a=batalha(Vj,Dj,Ej,Vm,Dm,Em)
-                    printa_status(Vm,Dm,Em,"Colega Infectado")
+                    printa_status(Vm,Dm,Em,Levelm, "Colega Infectado")
                     tempo(3)
                     print("...")
                     tempo(3)
@@ -616,6 +616,7 @@ def main():
                         tempo(4)
                         Inventario.append("banana dourada")
                         print('\033[35m'+'Banana dourada adcionado ao inventário'+'\033[0;0m')
+                        print('')
                         tempo(2)
                     elif arma=="barril explosivo":
                         print("Analisando o barril, percebe que ele é capaz de causar 250"
@@ -623,6 +624,7 @@ def main():
                         tempo(4)
                         Inventario.append("barril explosivo")
                         print('\033[35m'+'Barril explosivo adcionado ao inventário'+'\033[0;0m')
+                        print('')
                         tempo(2)
                     else:
                         print("Ao analisar o tronco atirador você foi capaz de perceber que"
@@ -630,6 +632,7 @@ def main():
                         tempo(4)
                         Inventario.append("tronco atirador")
                         print('\033[35m'+'Tronco atirador adcionado ao inventário'+'\033[0;0m')
+                        print('')
                         tempo(2)
                 else:
                     print("Você sai da sala 405")
