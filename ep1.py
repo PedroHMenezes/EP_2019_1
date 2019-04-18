@@ -443,6 +443,7 @@ def main():
                                     vitoria=True
                                     game_over=True
                         elif ataque1=="itau":
+
                         elif ataque1=='funcao':
                             print("Você define uma função!")
                             tempo(3)
@@ -462,7 +463,7 @@ def main():
                             tempo(3)
                             print("E grita:")
                             tempo(2)
-                            print("VOCÊ ESTÁ DE DP!")
+                            print('\033[31m'+'VOCÊ ESTÁ DE DP!!!!'+'\033[0;0m')
                             tempo(3)
                             game_over=True
                     else:
@@ -475,6 +476,8 @@ def main():
                         print("...")
                         tempo(3)
                         print("Mas passa em cima de uma pedra e sai voando!!!")
+                        tempo(3)
+                        print('\033[31m'+'Ai! Você caiu feio!'+'\033[0;0m')
                         tempo(3)
                         gamer_over=True
             elif escolha==cenarios["quarto andar"]:
