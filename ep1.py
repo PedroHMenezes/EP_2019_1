@@ -112,7 +112,7 @@ def carregar_cenarios():
                 "opcoes": {
                         "sala comp": "Ir para a sala com muitos equipamentos eletrônicos",
                         "fablab": "Ir para o famoso fablab do Insper",
-                        "Sala 405": "Ir para a sala 405 (Predio Velho)"
+                        "sala 405": "Ir para a sala 405 (Predio Velho)"
             }
         },
         "sala comp": {
@@ -228,7 +228,7 @@ def main():
                             tempo(3)
                             print('\033[34m'+'Você ganhou a batalha!'+'\033[0;0m')
                             batalha_next=batalha(Vj,Dj,Ej,Vm,Dm,Em)
-                            tempo(4)
+                            tempo(2)
                             print('\033[33m'+'Você subiu de nível!'+'\033[0;0m')
                             Level+=1
                             tempo(3)
@@ -384,14 +384,14 @@ def main():
                         print("O professor vira um monstro")
                         decisao_final="Sair no soco"
                 if decisao_final=="Sair no soco":
+
                     
-                
-                
+                    
             elif escolha==cenarios["quarto andar"]:
                 tempo(3)
                 print("O quarto andar pode ser um ótimo lugar para aumentar seu inventário")
             elif escolha==cenarios["lab de info"]:
-                tempo(3)
+                tempo(4)
                 print("Você olha para o pen-drive")
                 tempo(3)
                 print("...")
@@ -434,7 +434,7 @@ def main():
                 op=input("O que deseja fazer?(combate/fugir)")
                 if op=="combate":
                     a=batalha(Vj,Dj,Ej,Vm,Dm,Em)
-                    print("A batalha começou!")
+                    printa_status(Vm,Dm,Em,"Colega Infectado")
                     tempo(3)
                     print("...")
                     tempo(3)
@@ -443,9 +443,7 @@ def main():
                     print('...')
                     tempo(4)
                     print('\033[34m'+'Você ganhou a batalha!'+'\033[0;0m')
-                    tempo(1)
-                    print("Pontos de vida após a batalha: {0}".format(a))
-                    tempo(4)
+                    tempo(3)
                     print('\033[36m'+'Você subiu de nível!'+'\033[0;0m')
                     tempo(4)
                     Level+=1
@@ -456,14 +454,15 @@ def main():
             elif escolha==cenarios["sala 405"]:
                 tempo(3)
                 print("Você tenta abrir a porta da sala 405, mas ela não abre...")
-                tempo(1)
+                tempo(3)
                 print("Então você faz mais força, e ela abre")
-                tempo(2)
+                tempo(3)
                 print("Dentro da sala você percebe que há uma máquina de teleporte!")
-                tempo(2)
+                tempo(3)
                 tel=input("Deseja entrar na máquina de teleporte?(sim/nao)")
                 if tel=="sim":
-                        print('\033[36m'+'Você está na máquina de teleporte'+'\033[0;0m')
+                        print('\033[36m'+'Você está na máquina de teleporte:'+'\033[0;0m')
+                        print('')
                         tempo(3)
                 elif tel=="nintendo":
                     print("Parece que você encontrou um easter egg...")
@@ -544,6 +543,7 @@ def main():
                     Inventario.append("Alienware")
                     print('\033[35m'+'Alienware adicionado ao inventário'+'\033[0;0m')
                     tempo(3)
+                    Ej+=20
                     print('\033[36m'+'+20 pontos de Armour'+'\033[0;0m')
                     tempo(3)
                 else:
