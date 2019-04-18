@@ -549,6 +549,8 @@ def main():
                 else:
                     print("Você saiu da sala comp")
                     tempo(3)
+            elif escolha==cenarios["banheiro"]:
+                print("Tirando a água do joelho...")
                 #for k,v in opcoes.items():
                     #del
             for k,v in opcoes.items():
