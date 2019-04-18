@@ -398,7 +398,6 @@ def main():
                             " Hélio Peregrino")
                         print("Ele estremece o chão ao cair e você, quase caindo, dá um"
                             " mortal para trás e olha fixo para o monstro")
-                        Vp=300
                         print(printa_status())
                         print("Chute do dragão - 10 de dano")
                         print("Jogar uma bike do itau - 8 de dano")
@@ -444,8 +443,18 @@ def main():
                                     vitoria=True
                                     game_over=True
                         elif ataque1=="itau":
-                    
-                    
+                    else:
+                        print("Você pega um patinete elétrico e começa a fugir")
+                        tempo(3)
+                        print("...")
+                        tempo(3)
+                        print("Você chega à 25km/h com seu patinete")
+                        tempo(3)
+                        print("...")
+                        tempo(3)
+                        print("Mas passa em cima de uma pedra e sai voando!!!")
+                        tempo(3)
+                        gamer_over=True
             elif escolha==cenarios["quarto andar"]:
                 tempo(3)
                 print("O quarto andar pode ser um ótimo lugar para aumentar seu inventário")
