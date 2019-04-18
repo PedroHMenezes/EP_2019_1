@@ -398,10 +398,11 @@ def main():
                             " Hélio Peregrino")
                         print("Ele estremece o chão ao cair e você, quase caindo, dá um"
                             " mortal para trás e olha fixo para o monstro")
-                        print(printa_status)
+                        Vp=300
+                        print(printa_status())
                         print("Chute do dragão - 10 de dano")
                         print("Jogar uma bike do itau - 8 de dano")
-                        print("Usar uma função sem return - 10 de dano")
+                        print("Programar uma função sem return - 10 de dano")
                         ataque1=input("Qual será seu ataque?(dragão/itau/função)")
                         if ataque1=="dragão":
                             print("O professor consegue se programar para virar o "
@@ -415,6 +416,14 @@ def main():
                             if reacao1=="chutar":
                                 print("Você chuta o professor do lado esquerdo do corpo dele,"
                                     " fazendo ele largar seu pé e dar um passo atrás")
+                                print("Vocês continuam lutando bravamente!!!")
+                                print("Ele então prepara um código especial e atira em você!")
+                                print(" ' DICIONÁRIOS ANINHADOS!' ")
+                                print("Você toma um golpe muito forte, cai no chão" 
+                                    "e começa a se sentir fraco...")
+                                print("Ele chega perto de você e diz:" )
+                                print(" ' Você lutou muito bem, mas não há adiamento de EP's' ")
+                                game_over=True
                             else:
                                 print("Você soca o braço dele e ao fazer isso ele te segura"
                                     " no braço")
@@ -432,9 +441,9 @@ def main():
                                     print("O professor sente uma dor muito forte e te larga")
                                     print("Ele começa a andar para trás...")
                                     print("Então ele trava (assim como o while...)")
-                                    
-                        
-
+                                    vitoria=True
+                                    game_over=True
+                        elif ataque1=="itau":
                     
                     
             elif escolha==cenarios["quarto andar"]:
