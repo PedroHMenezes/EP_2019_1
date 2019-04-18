@@ -443,6 +443,46 @@ def main():
                                     vitoria=True
                                     game_over=True
                         elif ataque1=="itau":
+                            print("Você joga a bike do Itau e professor desvia rapidamente")
+                            print("Você então começa a procurar por uma saída e pensa em como"
+                                " derrotá-lo")
+                            print("Enquanto isso o professor prepara um código e joga em você!")
+                            print("EXERCÍCIOS DE PROVAS PASSADAS")
+                            print("Você tenta desviar mas acaba sendo atingido")
+                            print("Machucado, então você pensa em duas possibilidades:")
+                            print("Pegar o patinete e fugir")
+                            print("Olhar inventário")
+                            decisao_itau=input("O que deseja fazer?(patinete/inventario)")
+                            if decisao_itau=="patinete":
+                                print("O professor vê você tentando fugir no patinete e dá"
+                                    " risada")
+                                print("Ele então programa um patinete mais veloz e vai atrás"
+                                    " de você")
+                                print("Ele te alcança e transforma você em código")
+                                game_over=True
+                            elif decisao_itau=="inventario":
+                                i=0
+                                while i<len(Inventario):
+                                    print (Inventario[i])
+                                    i+=1
+                                item=input("Qual item deseja utilizar?")
+                                if "banana dourada" or "tronco atirador" or "barril explosivo" not in Inventario:
+                                    print("Nada aqui pode te ajudar muito...")
+                                    print("O professor percebendo uma brecha arremessa um"
+                                        " código em você e te acerta")
+                                    print(" 'Você bem que tentou, mas com grandes poderes"
+                                          " vem grandes responsabilidades' ")
+                                else:
+                                    if item in Inventario:
+                                        if item=="pen drive" or item=="Maçã" or item=="espada" or item=="Alienware" or item=="cartão de débito":
+                                            print("Nada disso pode te ajudar muito...")
+                                        else:
+                                            print("Você tira {0} do Inventário".format(item))
+                                            print(" ' ONDE VOCÊ CONSEGUIU ISSO?' ")
+                                            print("O professor surpreso, começa a processar código demais"
+                                                " e trava seu kernel")
+                                            game_over=True
+                                            vitoria=True
 
                         elif ataque1=='funcao':
                             print("Você define uma função!")
