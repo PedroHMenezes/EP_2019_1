@@ -188,6 +188,10 @@ def main():
                     Inventario.append("Maçã")
                     print ('\033[35m'+'Maçã adicionada ao inventário'+'\033[0;0m')
                     tempo(2)
+                    j+=1
+                else:
+                    print("Não há nada que possa lhe ajudar aqui na biblioteca...")
+                    tempo(2)
                 
             elif escolha==cenarios['inicio']:
                 if i==1:
@@ -195,7 +199,7 @@ def main():
                         " se deparou com a Next fazendo uma propaganda e dando"
                         " ingressos para o cinema")
                     tempo(4)
-                    ingresso=input("Deseja pegar um ingresso?(sim/não)")
+                    ingresso=input("Deseja pegar um ingresso?(sim/nao)")
                     if ingresso=="sim":
                         print("Um dos funcionários da Next chega em você e"
                               " pergunta:")
@@ -241,10 +245,13 @@ def main():
                             Inventario.append("Cartão de débito")
                             tempo(4)
                             print('\033[35m'+'Cartão adicionado ao inventário'+'\033[0;0m')
+                            print('')
                             tempo(4)
                         else:
-                            print("'\033[31m'+'Você perdeu 15 de dano de ataque'+'\033[0;0m'")
                             Dj=Dj-15
+                            print("'\033[31m'+'Você perdeu 15 de dano de ataque'+'\033[0;0m'")
+                            print('')
+                            tempo(3)
                             print(printa_status(Vj,Dj,Ej,Level))
                 i+=1
             elif escolha==cenarios["professor"]:
