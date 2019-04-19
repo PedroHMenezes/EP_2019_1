@@ -161,6 +161,7 @@ def main():
     cenarios, nome_cenario_atual = carregar_cenarios()
     i=0
     j=0
+    cont=0
     Inventario=[]
     game_over = False
     vitoria=False
@@ -214,11 +215,11 @@ def main():
                         tempo(2)
                         print('\033[32m'+'O FUNCIONÁRIO VIRA UM MONSTRO'+'\033[0;0m')
                         tempo(2)
-                        print("Opções: Combater o monstro ou perder 15 de dano de ataque")
+                        print("Opções: Combater o monstro ou fugir perder 15 de dano de ataque")
                         tempo(2)
-                        op=input('O que deseja fazer?(combate/fugir)')
+                        op=input('O que deseja fazer?(combater/fugir)')
                         tempo(2)
-                        if op=='combate':                      
+                        if op=='combater':                      
                             Levelm=2
                             Vm=50
                             Dm=10
@@ -251,23 +252,21 @@ def main():
                             tempo(4)
                         else:
                             Dj=Dj-15
-                            print("'\033[31m'+'Você perdeu 15 de dano de ataque'+'\033[0;0m'")
+                            print('\033[31m'+'Você perdeu 15 de dano de ataque'+'\033[0;0m')
                             print('')
                             tempo(3)
-                            print(printa_status(Vj,Dj,Ej,Level))
+                            print(printa_status(Vj,Dj,Ej,Level,''))
                 i+=1
             elif escolha==cenarios["professor"]:
                 print("Ao entrar na sala você se depara com o monstro"
                     " do Python")
                 print("'Olá, caro aluno, o que deseja?'")
-                decisao_final=input("O que deseja fazer?(Abrir inventário/Conversar)")
+                decisao_final=input("O que deseja fazer?(abrir inventario/Conversar)")
                 while decisao_final!="Sair no soco":
-                    if decisao_final=="abrir inventário":
-                        print("Você olha no inventário e vê seus itens")
-                        i=0
-                        while i<len(Inventario):
-                            print(Inventario[i])
-                            i+=1
+                    if decisao_final=="abrir inventario":
+                        print("Você olha no inventário e vê seus itens:")
+                        for e in Inventario:
+                            print(e)
                         escolha=input("Deseja usar alguma coisa dessas?(digite um dos itens)")
                         if escolha in Inventario:
                             if escolha=="Maçã":
@@ -327,7 +326,7 @@ def main():
                                 print("Acho que não seria uma boa coisa oferecer"
                                     " essa espada a ele...")
                                 tempo(2)
-                                confirmacao=input("Quer mesmo oferecer isso a ele?(sim/não")
+                                confirmacao=input("Quer mesmo oferecer isso a ele?(sim/não)")
                                 if confirmacao=="sim":
                                     print("Você mostra a espada para ele")
                                     tempo(2)
@@ -343,6 +342,7 @@ def main():
                                     tempo(1)
                                     decisao_final=="Sair no soco"
                                 else:
+                                    print('')
                                     print("Acho melhor viu...")
                                     tempo(1)
                             elif escolha=="Alienware":
@@ -412,7 +412,7 @@ def main():
                     tempo(2)
                     print("Você, atordoado pela queda, pensa em 2 opções:")
                     tempo(2)
-                    print("Pegar a bike do Itau e fugir ou lutar")
+                    print("Pegar um patinete elétrico e fugir ou lutar")
                     tempo(2)
                     Helio_escolha=input("Qual você escolhe?(fugir/lutar)")
                     if Helio_escolha=="lutar":
@@ -590,7 +590,7 @@ def main():
                         tempo(3)
                         print('\033[31m'+'Ai! Você caiu feio!'+'\033[0;0m')
                         tempo(3)
-                        game_over=True
+                    game_over=True
             elif escolha==cenarios["quarto andar"]:
                 tempo(3)
                 print("O quarto andar pode ser um ótimo lugar para aumentar seu inventário")
@@ -658,14 +658,18 @@ def main():
                 else:
                     print("Você fugiu")
             elif escolha==cenarios["sala 405"]:
-                tempo(3)
-                print("Você tenta abrir a porta da sala 405, mas ela não abre...")
-                tempo(3)
-                print("Então você faz mais força, e ela abre")
-                tempo(3)
-                print("Dentro da sala você percebe que há uma máquina de teleporte!")
-                tempo(3)
-                tel=input("Deseja entrar na máquina de teleporte?(sim/nao)")
+                if cont==0:
+                    tempo(3)
+                    print("Você tenta abrir a porta da sala 405, mas ela não abre...")
+                    tempo(3)
+                    print("Então você faz mais força, e ela abre")
+                    tempo(3)
+                    print("Dentro da sala você percebe que há uma máquina de teleporte!")
+                    tempo(3)
+                    tel=input("Deseja entrar na máquina de teleporte?(sim/nao)")
+                    cont+=1
+                elif cont>0:
+                    tel=input("Deseja entrar na máquina de teleporte?(sim/nao)")
                 if tel=="sim":
                             print('\033[36m'+'Você está na máquina de teleporte:'+'\033[0;0m')
                             print('')
@@ -710,6 +714,7 @@ def main():
                         tempo(2)
                 else:
                     print("Você sai da sala 405")
+                    print('')
                     tempo(2)
             elif escolha==cenarios["andar professor"]:
                 tempo(5)
@@ -739,6 +744,7 @@ def main():
                     tempo(3)
                     print('\033[35m'+'Espada adicionada ao inventário'+'\033[0;0m')
                     tempo(3)
+                    print('')
                 else:
                     print("Então vá em frente e abra essa porta")
             elif escolha==cenarios["quarto andar"]:
