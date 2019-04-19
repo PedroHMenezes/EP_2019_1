@@ -374,7 +374,7 @@ def main():
                         else:
                             print("Você está tentando usar um item que não"
                                     " está em seu inventário")
-                    elif decisao_final=="Conversar":
+                if decisao_final=="Conversar":
                         print(" 'Certo... Sobre o que quer conversar?' ")
                         print("Preciso de um adiamento do EP...")
                         print(" 'O que você fez nesse tempo que tinha?' ")
@@ -384,7 +384,7 @@ def main():
                         print(" 'VOCÊ NÃO TERÁ ADIAMENTO DO EP!' ")
                         print("O professor vira um monstro")
                         decisao_final="Sair no soco"
-                if decisao_final=="Sair no soco":
+                elif decisao_final=="Sair no soco":
                     del opcoes['andar professor']
                     print ("O professor em forma de monstro, começa a destruir a sala"
                          " por conta do seu tamanho")
@@ -398,7 +398,11 @@ def main():
                             " Hélio Peregrino")
                         print("Ele estremece o chão ao cair. E você, quase caindo, dá um"
                             " mortal para trás e olha fixo para o monstro")
-                        print(printa_status())
+                        Vp=400
+                        Dp=100
+                        Ep=100
+                        Levelp=100
+                        print(printa_status(Vp,Dp,Ep,Levelp,"Professor"))
                         print("Chute do dragão - 10 de dano")
                         print("Jogar uma bike do itau - 8 de dano")
                         print("Programar uma função sem return - 10 de dano")
