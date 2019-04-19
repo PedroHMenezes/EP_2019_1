@@ -9,7 +9,7 @@ Created on Tue Apr 16 18:12:55 2019
 # Alunos: 
 # - aluno A: Pedro Henrique Menezes de Oliveira, pedrohmo@al.insper.edu.br
 # - aluno B: Eiki Luis Yamashiro Batista dos Santos, eikily@insper.edu.br
-
+cont1=0
 import time
 
 def tempo(t):
@@ -187,10 +187,12 @@ def main():
                     tempo(4)
                     Inventario.append("Maçã")
                     print ('\033[35m'+'Maçã adicionada ao inventário'+'\033[0;0m')
+                    print('')
                     tempo(2)
                     j+=1
                 else:
                     print("Não há nada que possa lhe ajudar aqui na biblioteca...")
+                    print('')
                     tempo(2)
                 
             elif escolha==cenarios['inicio']:
@@ -592,6 +594,8 @@ def main():
             elif escolha==cenarios["quarto andar"]:
                 tempo(3)
                 print("O quarto andar pode ser um ótimo lugar para aumentar seu inventário")
+                print('')
+                tempo(2)
             elif escolha==cenarios["lab de info"]:
                 tempo(4)
                 print("Você olha para o pen-drive")
@@ -663,9 +667,10 @@ def main():
                 tempo(3)
                 tel=input("Deseja entrar na máquina de teleporte?(sim/nao)")
                 if tel=="sim":
-                        print('\033[36m'+'Você está na máquina de teleporte:'+'\033[0;0m')
-                        print('')
-                        tempo(3)
+                            print('\033[36m'+'Você está na máquina de teleporte:'+'\033[0;0m')
+                            print('')
+                            tempo(3)
+                
                 elif tel=="nintendo":
                     print("Parece que você encontrou um easter egg...")
                     tempo(2)
