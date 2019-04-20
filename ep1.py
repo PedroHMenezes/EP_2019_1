@@ -162,7 +162,7 @@ def main():
     i=0
     j=0
     cont=0
-    Inventario=["Maçã","Alienware","pen drive","Cartão de débito","barril explosivo"]
+    Inventario=[]
     game_over = False
     vitoria=False
     while not game_over:
@@ -270,12 +270,11 @@ def main():
                         escolha=input("Deseja usar alguma coisa dessas?(digite um dos itens)")
                         if escolha in Inventario:
                             if escolha=="Maçã":
-                                print("Você deu a maçã para o professor")
+                                print("'Como que você pode me oferecer isso?'")
                                 tempo(2)
-                                print("Ele, muito agradecido, nega sua oferta dizendo"
-                                      " que não gosta de maçãs")
-                                tempo(3)
-                                print("Maçã retorna ao seu inventário")
+                                print("Pensei que fosse gostar...")
+                                tempo(1)
+                                print("'Achou errado, otário'")
                                 tempo(1)
                             elif escolha=="Cartão de débito":
                                 print("Olha professor... Eu tenho esse cartão"
