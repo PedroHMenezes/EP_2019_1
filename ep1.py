@@ -276,6 +276,8 @@ def main():
                                 tempo(1)
                                 print("'Achou errado, otário'")
                                 tempo(1)
+                                print("Professor vira o monstro do Python")
+                                tempo(1)
                             elif escolha=="Cartão de débito":
                                 print("Olha professor... Eu tenho esse cartão"
                                       " que você pode usar para pagar um almoção"
@@ -453,7 +455,7 @@ def main():
                               " perna")
                         tempo(2)
                         print("Você rapidamente pensa em possibilidades: pode chutar ele com"
-                              " a outra perna ou tirar a mão da sua perna")
+                              " a outra perna ou tirar a mão dele da sua perna")
                         tempo(2)
                         reacao1=input("Qual sua decisão?(chutar/tirar)")
                         if reacao1=="chutar":
@@ -544,6 +546,7 @@ def main():
                                 tempo(3)
                                 print(" 'Você bem que tentou, mas com grandes poderes"
                                       " vem grandes responsabilidades' ")
+                                game_over=True
                             else:
                                 if item in Inventario:
                                     if item=="pen drive" or item=="Maçã" or item=="espada" or item=="Alienware" or item=="cartão de débito":
