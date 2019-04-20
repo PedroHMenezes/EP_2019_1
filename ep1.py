@@ -162,7 +162,7 @@ def main():
     i=0
     j=0
     cont=0
-    Inventario=[]
+    Inventario=["Maçã","Alienware","pen drive","Cartão de débito","barril explosivo"]
     game_over = False
     vitoria=False
     while not game_over:
@@ -283,14 +283,20 @@ def main():
                                       " lá no Laranjinha. O que acha?")
                                 tempo(3)
                                 print(" 'Hmmm... Eu gosto do chef de lá... O que"
-                                      " você quer em troca?")
+                                      " você quer em troca?' ")
                                 tempo(2)
                                 print("Você entrega o cartão para o professor")
                                 tempo(1)
-                                del Inventario["Cartão de débito"]
+                                i=0
+                                indice=0
+                                while i<len(Inventario):
+                                    if Inventario[i]=="Cartão de débito":
+                                        indice=i
+                                    i+=1
+                                del (Inventario[indice])
                                 print("Então... Eu preciso de um adiamento do EP...")
                                 tempo(2)
-                                print(" 'Bom... Posso adiar para amanhã. O que acha?")
+                                print(" 'Bom... Posso adiar para amanhã. O que acha?' ")
                                 tempo(2)
                                 print("Mas para amanhã é pouco tempo professor!!!")
                                 tempo(1)
@@ -310,9 +316,10 @@ def main():
                                 tempo(1)
                                 print("O professor vira o monstro do Python")
                                 tempo(1)
+                                decisao_final="Sair no soco"
                                 
                             elif escolha=="pen drive":
-                                print(" 'O que é isso? Um pen drive? O que tem ai dentro?")
+                                print(" 'O que é isso? Um pen drive? O que tem ai dentro?' fugir")
                                 tempo(2)
                                 print("O Python 4.0...")
                                 tempo(1)
@@ -354,7 +361,7 @@ def main():
                                 print("Você gosta dessa linha de computadores da Dell?")
                                 tempo(2)
                                 print(" 'É, eles são de fato muito bons... Mas o que você"
-                                    " quer com eles?")
+                                    " quer com eles?' ")
                                 tempo(3)
                                 print("Poderia adiar o EP em troca de um desses...")
                                 tempo(2)
@@ -402,193 +409,192 @@ def main():
                             print("O professor vira um monstro")
                             tempo(2)
                             decisao_final="Sair no soco"
-                    del opcoes['andar professor']
+                del opcoes['andar professor']
+                tempo(2)
+                print ("O professor em forma de monstro, começa a destruir a sala"
+                          " por conta do seu tamanho")
+                tempo(2)
+                print("Ele agarra você e joga longe, direto para a Hélio Peregrino")
+                tempo(2)
+                print("Você, atordoado pela queda, pensa em 2 opções:")
+                tempo(2)
+                print("Pegar um patinete elétrico e fugir ou lutar")
+                tempo(2)
+                Helio_escolha=input("Qual você escolhe?(fugir/lutar)")
+                if Helio_escolha=="lutar":
+                    print("Você se prepara para o combate!")
                     tempo(2)
-                    print ("O professor em forma de monstro, começa a destruir a sala"
-                           " por conta do seu tamanho")
+                    print("O professor pula do prédio do Insper direto para a"
+                          " Hélio Peregrino")
                     tempo(2)
-                    print("Ele agarra você e joga longe, direto para a Hélio Peregrino")
+                    print("Ele estremece o chão ao cair. E você, quase caindo, dá um"
+                          " mortal para trás e olha fixo para o monstro")
                     tempo(2)
-                    print("Você, atordoado pela queda, pensa em 2 opções:")
+                    Vp=400
+                    Dp=100
+                    Ep=100
+                    Levelp=100
+                    print(printa_status(Vp,Dp,Ep,Levelp,"Professor"))
                     tempo(2)
-                    print("Pegar um patinete elétrico e fugir ou lutar")
+                    print("Chute do dragão - 10 de dano")
                     tempo(2)
-                    Helio_escolha=input("Qual você escolhe?(fugir/lutar)")
-                    if Helio_escolha=="lutar":
-                        print("Você se prepara para o combate!")
+                    print("Jogar uma bike do itau - 8 de dano")
+                    tempo(2)
+                    print("Programar uma função sem return - 10 de dano")
+                    tempo(2)
+                    ataque1=input("Qual será seu ataque?(dragão/itau/funcao)")
+                    tempo(2)
+                    if ataque1=="dragão":
+                        print("O professor consegue se programar para virar o "
+                              "Jackie Chan e vocês começam uma luta")
                         tempo(2)
-                        print("O professor pula do prédio do Insper direto para a"
-                              " Hélio Peregrino")
+                        print("Você vai em direção a ele com o chute do dragão")
                         tempo(2)
-                        print("Ele estremece o chão ao cair. E você, quase caindo, dá um"
-                              " mortal para trás e olha fixo para o monstro")
+                        print("Ele para seu pé com uma das mãos e com a outra segura sua"
+                              " perna")
                         tempo(2)
-                        Vp=400
-                        Dp=100
-                        Ep=100
-                        Levelp=100
-                        print(printa_status(Vp,Dp,Ep,Levelp,"Professor"))
+                        print("Você rapidamente pensa em possibilidades: pode chutar ele com"
+                              " a outra perna ou tirar a mão da sua perna")
                         tempo(2)
-                        print("Chute do dragão - 10 de dano")
-                        tempo(2)
-                        print("Jogar uma bike do itau - 8 de dano")
-                        tempo(2)
-                        print("Programar uma função sem return - 10 de dano")
-                        tempo(2)
-                        ataque1=input("Qual será seu ataque?(dragão/itau/funcao)")
-                        tempo(2)
-                        if ataque1=="dragão":
-                            print("O professor consegue se programar para virar o "
-                                  "Jackie Chan e vocês começam uma luta")
+                        reacao1=input("Qual sua decisão?(chutar/tirar)")
+                        if reacao1=="chutar":
+                            print("Você chuta o professor do lado esquerdo do corpo dele,"
+                                  " fazendo ele largar seu pé e dar um passo atrás")
                             tempo(2)
-                            print("Você vai em direção a ele com o chute do dragão")
+                            print("Vocês continuam lutando bravamente!!!")
                             tempo(2)
-                            print("Ele para seu pé com uma das mãos e com a outra segura sua"
-                                  " perna")
+                            print("Ele então prepara um código especial e atira em você!")
                             tempo(2)
-                            print("Você rapidamente pensa em possibilidades: pode chutar ele com"
-                                  " a outra perna ou tirar a mão da sua perna")
+                            print(" ' DICIONÁRIOS ANINHADOS!' ")
                             tempo(2)
-                            reacao1=input("Qual sua decisão?(chutar/tirar)")
-                            if reacao1=="chutar":
-                                print("Você chuta o professor do lado esquerdo do corpo dele,"
-                                      " fazendo ele largar seu pé e dar um passo atrás")
-                                tempo(2)
-                                print("Vocês continuam lutando bravamente!!!")
-                                tempo(2)
-                                print("Ele então prepara um código especial e atira em você!")
-                                tempo(2)
-                                print(" ' DICIONÁRIOS ANINHADOS!' ")
-                                tempo(2)
-                                print("Você toma um golpe muito forte, cai no chão" 
-                                      "e começa a se sentir fraco...")
-                                tempo(2)
-                                print("Ele chega perto de você e diz:" )
-                                tempo(2)
-                                print(" ' Você lutou muito bem, mas não há adiamento de EP's' ")
-                                tempo(2)
+                            print("Você toma um golpe muito forte, cai no chão" 
+                                  "e começa a se sentir fraco...")
+                            tempo(2)
+                            print("Ele chega perto de você e diz:" )
+                            tempo(2)
+                            print(" ' Você lutou muito bem, mas não há adiamento de EP's' ")
+                            tempo(2)
+                            game_over=True
+                        else:
+                            print("Você soca o braço dele e ao fazer isso ele te segura"
+                                  " no braço")
+                            tempo(2)
+                            print("Com poucas opções, você tenta se soltar, mas o Jackie "
+                                  "Chan do Python acaba percebendo isso e está transformando"
+                                  " você em código")
+                            tempo(3)
+                            print("Você pode fazer duas movimentações:")
+                            tempo(2)
+                            print("Pedir socorro")
+                            tempo(2)
+                            print("Gritar bem alto while sem i+=1")
+                            tempo(2)
+                            reacao2=input("Como última chance, o que deseja fazer?(socorro/while)")
+                            if reacao2=="socorro":
+                                print("Você pede socorro, mas ninguém sequer te ouve...")
                                 game_over=True
                             else:
-                                print("Você soca o braço dele e ao fazer isso ele te segura"
-                                      " no braço")
+                                print("O professor sente uma dor muito forte e te larga")
                                 tempo(2)
-                                print("Com poucas opções, você tenta se soltar, mas o Jackie "
-                                      "Chan do Python acaba percebendo isso e está transformando"
-                                      " você em código")
-                                tempo(3)
-                                print("Você pode fazer duas movimentações:")
+                                print("Ele começa a andar para trás...")
                                 tempo(2)
-                                print("Pedir socorro")
+                                print("Então ele trava (assim como o while...)")
                                 tempo(2)
-                                print("Gritar bem alto while sem i+=1")
-                                tempo(2)
-                                reacao2=input("Como última chance, o que deseja fazer?(socorro/while)")
-                                if reacao2=="socorro":
-                                    print("Você pede socorro, mas ninguém sequer te ouve...")
-                                    game_over==True
-                                else:
-                                    print("O professor sente uma dor muito forte e te larga")
-                                    tempo(2)
-                                    print("Ele começa a andar para trás...")
-                                    tempo(2)
-                                    print("Então ele trava (assim como o while...)")
-                                    tempo(2)
-                                    print('...')
-                                    vitoria=True
-                                    game_over=True
-                        elif ataque1=="itau":
-                            print("Você joga a bike do Itau e professor desvia rapidamente")
-                            tempo(2)
-                            print("Você então começa a procurar por uma saída e pensa em como"
-                                " derrotá-lo")
-                            tempo(2)
-                            print("Enquanto isso o professor prepara um código e joga em você!")
-                            tempo(2)
-                            print("EXERCÍCIOS DE PROVAS PASSADAS")
-                            tempo(2)
-                            print("Você tenta desviar mas acaba sendo atingido")
-                            tempo(2)
-                            print("Machucado, então você pensa em duas possibilidades:")
-                            tempo(2)
-                            print("Pegar o patinete e fugir")
-                            tempo(2)
-                            print("Olhar inventário")
-                            tempo(2)
-                            decisao_itau=input("O que deseja fazer?(patinete/inventario)")
-                            if decisao_itau=="patinete":
-                                print("O professor vê você tentando fugir no patinete e dá"
-                                    " risada")
-                                tempo(2)
-                                print("Ele então programa um patinete mais veloz e vai atrás"
-                                    " de você")
-                                tempo(2)
-                                print("Ele te alcança e transforma você em código")
+                                print('...')
+                                vitoria=True
                                 game_over=True
-                            elif decisao_itau=="inventario":
-                                i=0
-                                while i<len(Inventario):
-                                    print (Inventario[i])
-                                    i+=1
-                                item=input("Qual item deseja utilizar?")
-                                if "banana dourada" or "tronco atirador" or "barril explosivo" not in Inventario:
-                                    print("Nada aqui pode te ajudar muito...")
-                                    tempo(2)
-                                    print("O professor percebendo uma brecha arremessa um"
-                                        " código em você e te acerta")
-                                    tempo(3)
-                                    print(" 'Você bem que tentou, mas com grandes poderes"
-                                          " vem grandes responsabilidades' ")
-                                else:
-                                    if item in Inventario:
-                                        if item=="pen drive" or item=="Maçã" or item=="espada" or item=="Alienware" or item=="cartão de débito":
-                                            print("Nada disso pode te ajudar muito...")
-                                            tempo(2)
-                                        else:
-                                            print("Você tira {0} do Inventário".format(item))
-                                            tempo(2)
-                                            print(" ' ONDE VOCÊ CONSEGUIU ISSO?' ")
-                                            tempo(2)
-                                            print("O professor surpreso, começa a processar código demais"
-                                                " e trava seu kernel")
-                                            tempo(2)
-                                            game_over=True
-                                            vitoria=True
-
-                        elif ataque1=='funcao':
-                            print("Você define uma função!")
-                            tempo(3)
-                            print("...")
-                            tempo(3)
-                            print("Mas...")
-                            tempo(3)
-                            print("Você não coloca o return!")
-                            tempo(3)
-                            print("O professor então diz:")
-                            tempo(3)
-                            print("...")
-                            tempo(3)
-                            print("'None'")
-                            tempo(3)
-                            print("Então ele olha fixamente para você...")
-                            tempo(3)
-                            print("E grita:")
+                    elif ataque1=="itau":
+                        print("Você joga a bike do Itau e professor desvia rapidamente")
+                        tempo(2)
+                        print("Você então começa a procurar por uma saída e pensa em como"
+                              " derrotá-lo")
+                        tempo(2)
+                        print("Enquanto isso o professor prepara um código e joga em você!")
+                        tempo(2)
+                        print("EXERCÍCIOS DE PROVAS PASSADAS")
+                        tempo(2)
+                        print("Você tenta desviar mas acaba sendo atingido")
+                        tempo(2)
+                        print("Machucado, então você pensa em duas possibilidades:")
+                        tempo(2)
+                        print("Pegar o patinete e fugir")
+                        tempo(2)
+                        print("Olhar inventário")
+                        tempo(2)
+                        decisao_itau=input("O que deseja fazer?(patinete/inventario)")
+                        if decisao_itau=="patinete":
+                            print("O professor vê você tentando fugir no patinete e dá"
+                                  " risada")
                             tempo(2)
-                            print('\033[31m'+'VOCÊ ESTÁ DE DP!!!!'+'\033[0;0m')
-                            tempo(3)
+                            print("Ele então programa um patinete mais veloz e vai atrás"
+                                  " de você")
+                            tempo(2)
+                            print("Ele te alcança e transforma você em código")
                             game_over=True
-                    else:
-                        print("Você pega um patinete elétrico e começa a fugir")
+                        elif decisao_itau=="inventario":
+                            i=0
+                            while i<len(Inventario):
+                                print (Inventario[i])
+                                i+=1
+                            item=input("Qual item deseja utilizar?")
+                            if "banana dourada" or "tronco atirador" or "barril explosivo" not in Inventario:
+                                print("Nada aqui pode te ajudar muito...")
+                                tempo(2)
+                                print("O professor percebendo uma brecha arremessa um"
+                                      " código em você e te acerta")
+                                tempo(3)
+                                print(" 'Você bem que tentou, mas com grandes poderes"
+                                      " vem grandes responsabilidades' ")
+                            else:
+                                if item in Inventario:
+                                    if item=="pen drive" or item=="Maçã" or item=="espada" or item=="Alienware" or item=="cartão de débito":
+                                        print("Nada disso pode te ajudar muito...")
+                                        tempo(2)
+                                    else:
+                                        print("Você tira {0} do Inventário".format(item))
+                                        tempo(2)
+                                        print(" ' ONDE VOCÊ CONSEGUIU ISSO?' ")
+                                        tempo(2)
+                                        print("O professor surpreso, começa a processar código demais"
+                                              " e trava seu kernel")
+                                        tempo(2)
+                                        game_over=True
+                                        vitoria=True
+                    elif ataque1=='funcao':
+                        print("Você define uma função!")
                         tempo(3)
                         print("...")
                         tempo(3)
-                        print("Você chega à 25km/h com seu patinete")
+                        print("Mas...")
+                        tempo(3)
+                        print("Você não coloca o return!")
+                        tempo(3)
+                        print("O professor então diz:")
                         tempo(3)
                         print("...")
                         tempo(3)
-                        print("Mas passa em cima de uma pedra e sai voando!!!")
+                        print("'None'")
                         tempo(3)
-                        print('\033[31m'+'Ai! Você caiu feio!'+'\033[0;0m')
+                        print("Então ele olha fixamente para você...")
                         tempo(3)
+                        print("E grita:")
+                        tempo(2)
+                        print('\033[31m'+'VOCÊ ESTÁ DE DP!!!!'+'\033[0;0m')
+                        tempo(3)
+                        game_over=True
+                else:
+                    print("Você pega um patinete elétrico e começa a fugir")
+                    tempo(3)
+                    print("...")
+                    tempo(3)
+                    print("Você chega à 25km/h com seu patinete")
+                    tempo(3)
+                    print("...")
+                    tempo(3)
+                    print("Mas passa em cima de uma pedra e sai voando!!!")
+                    tempo(3)
+                    print('\033[31m'+'Ai! Você caiu feio!'+'\033[0;0m')
+                    tempo(3)
                     game_over=True
             elif escolha==cenarios["quarto andar"]:
                 tempo(3)
