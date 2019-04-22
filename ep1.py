@@ -725,18 +725,18 @@ def main():
                     tempo(2)
             elif escolha==cenarios["andar professor"]:
                 tempo(5)
-                print("Ao chegar no andar do professor percebe que há"
+                print("Ao chegar no andar do professor, você percebe que há"
                         " uma força estranha no ar...")
                 tempo(4)
                 print("Na entrada da sala do professor há uma espada "
                         " encravada numa pilha de provas...")
                 tempo(4)
-                print("Ao chegar mais perto você observa e vê que são"
-                        " provas de Python e observa que há uma frase escrita"
-                        " na espada")
+                print("Ao chegar mais perto você observa que são"
+                        " provas de Python e que há uma frase escrita"
+                        " nela")
                 tempo(4)
                 print("O aluno que conseguir retirar a "
-                        " espada encravada nesta pilha de provas será o capaz"
+                        " espada encravada nesta pilha de provas será capaz"
                         " de ser chamado de oráculo do Python")
                 tempo(5)
                 espada=input("Deseja tentar retirar a espada?(sim/não)")
