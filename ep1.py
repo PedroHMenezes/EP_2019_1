@@ -538,7 +538,7 @@ def main():
                                 print (Inventario[i])
                                 i+=1
                             item=input("Qual item deseja utilizar?")
-                            if "banana dourada" or "tronco atirador" or "barril explosivo" not in Inventario:
+                            if "banana dourada" and "tronco atirador" and "barril explosivo" not in Inventario:
                                 print("Nada aqui pode te ajudar muito...")
                                 tempo(2)
                                 print("O professor percebendo uma brecha arremessa um"
